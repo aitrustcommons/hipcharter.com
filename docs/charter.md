@@ -1,8 +1,14 @@
+---
+description: "The HIP Charter defines four patterns of human-AI partnership: Foundation, Tooling, Pipeline, and Integration. Drop 'artificial.' Start building with intelligence."
+---
+
 # The Human Intelligence Partnership Charter
 
 ## Stop Calling It Artificial. Start Building WITH Intelligence.
 
 *Nikhil Singhal · March 2026*
+
+![The Human Intelligence Partnership Charter - Combination Lattice](assets/images/v8-split-color-poster.png)
 
 ---
 

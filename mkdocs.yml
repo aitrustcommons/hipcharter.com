@@ -1,6 +1,6 @@
 site_name: The Human Intelligence Partnership Charter
 site_url: https://hipcharter.com
-site_description: "Stop Calling It Artificial. Start Building WITH Intelligence."
+site_description: "Stop Calling It Artificial. Start Building WITH Intelligence. The HIP Charter defines four patterns of human-AI partnership and the structural gap at every pattern."
 site_author: Nikhil Singhal
 
 theme:
@@ -8,14 +8,14 @@ theme:
   custom_dir: overrides
   palette:
     - scheme: default
-      primary: white
-      accent: green
+      primary: teal
+      accent: teal
       toggle:
         icon: material/brightness-4
         name: Switch to dark mode
     - scheme: slate
-      primary: black
-      accent: green
+      primary: teal
+      accent: teal
       toggle:
         icon: material/brightness-7
         name: Switch to light mode
@@ -44,6 +44,9 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - admonition
   - pymdownx.details
   - attr_list

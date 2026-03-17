@@ -1,14 +1,12 @@
 ---
+description: "The Human Intelligence Partnership Charter. Four patterns of human-AI partnership. Drop 'artificial.' Start building with intelligence."
 hide:
-  - navigation
   - toc
 ---
 
 # The Human Intelligence Partnership Charter
 
-<div class="hero-label" markdown>
 **Stop Calling It Artificial. Start Building WITH Intelligence.**
-</div>
 
 There is just intelligence. Two forms of it exist. The question of how they work together matters.
 
@@ -33,33 +31,17 @@ Together: a worldview (intelligence deserves structural respect), a framework (f
 
 ## The Four Patterns
 
-<div class="grid cards" markdown>
+**🏗️ Foundation** — AI as Build Partner. Human steers, AI implements. The daily practice of two intelligences working side by side.
 
--   :material-hammer-wrench: **Foundation**
+**🔧 Tooling** — Human-First, Zero AI Dependency. AI built it, but AI is not in it. If every API disappeared, these products still work.
 
-    ---
+**⚙️ Pipeline** — AI-Enhanced Systems. AI enriches data, users interact with the result. Users may never know AI was involved.
 
-    AI as Build Partner. Human steers, AI implements. The daily practice of two intelligences working side by side.
+**🔗 Integration** — AI as Collaborative Component. AI works alongside live data and domain logic. Swap the model, the architecture survives.
 
--   :material-tools: **Tooling**
+These are not a hierarchy. They are petals of a bloom. The overlaps create depth. The center is full partnership.
 
-    ---
-
-    Human-First, Zero AI Dependency. AI built it, but AI is not in it. If every API disappeared, these products still work.
-
--   :material-pipe: **Pipeline**
-
-    ---
-
-    AI-Enhanced Systems. AI enriches data, users interact with the result. Users may never know AI was involved.
-
--   :material-link-variant: **Integration**
-
-    ---
-
-    AI as Collaborative Component. AI works alongside live data and domain logic. Swap the model, the architecture survives.
-
-</div>
+[Explore the full charter →](charter.md)
 
 ---
 
@@ -73,6 +55,8 @@ The HIP Charter is part of an ongoing series exploring the structural gap betwee
 | [Languages Designed for Humans](https://aitrustcommons.org/blog/2026/03/13/languages-designed-for-humans/) | Instance One: programming languages |
 | [Engine vs Steering Wheel](https://aitrustcommons.org/blog/2026/03/14/engine-vs-steering-wheel/) | The gap is architecture-agnostic |
 | **The HIP Charter** | The framework, the premise, and the evidence |
+
+Published on [aitrustcommons.org](https://aitrustcommons.org/blog/), [Medium](https://nikhilsinghal-ai-trust-commons.medium.com/), and [Zenodo](https://zenodo.org).
 
 ---
 

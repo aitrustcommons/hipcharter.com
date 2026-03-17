@@ -1,3 +1,7 @@
+---
+description: "About Nikhil Singhal, author of the HIP Charter. CTO, VP Engineering, AI Practitioner and Governance Strategist."
+---
+
 # About
 
 ## Author
@@ -12,10 +16,7 @@ The HIP Charter emerged from a year of building with AI as a full partner across
 
 Nikhil is also the founder of [AI Trust Commons](https://aitrustcommons.org), an open-source initiative building the cross-provider governance layer for AI agents. He submitted a public comment to NIST on AI agent governance and is writing a book, *From Instinct to Intent*™, on the journey from instinct to deliberate design in human-AI interaction.
 
-[LinkedIn :material-linkedin:](https://linkedin.com/in/nikhilsinghal){ .md-button }
-[GitHub :material-github:](https://github.com/nikhilsi){ .md-button }
-[AI Trust Commons :material-web:](https://aitrustcommons.org){ .md-button }
-[Email :material-email:](mailto:nikhil@aitrustcommons.org){ .md-button }
+[LinkedIn](https://linkedin.com/in/nikhilsinghal){ .md-button } [GitHub](https://github.com/nikhilsi){ .md-button } [AI Trust Commons](https://aitrustcommons.org){ .md-button } [Email](mailto:nikhil@aitrustcommons.org){ .md-button }
 
 ---
 
