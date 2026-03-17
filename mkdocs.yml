@@ -1,0 +1,69 @@
+site_name: The Human Intelligence Partnership Charter
+site_url: https://hipcharter.com
+site_description: "Stop Calling It Artificial. Start Building WITH Intelligence."
+site_author: Nikhil Singhal
+
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+    - scheme: default
+      primary: white
+      accent: green
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      accent: green
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
+  font:
+    text: DM Sans
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - toc.integrate
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/aitrustcommons/hipcharter.com
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/nikhilsinghal
+    - icon: fontawesome/solid/envelope
+      link: mailto:nikhil@aitrustcommons.org
+
+copyright: "&copy; 2026 Nikhil Singhal. Published by AI Trust Commons. Licensed under CC BY 4.0."
+
+nav:
+  - Home: index.md
+  - The Charter: charter.md
+  - About: about.md

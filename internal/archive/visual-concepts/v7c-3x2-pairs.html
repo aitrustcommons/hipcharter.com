@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Human Intelligence Partnership Charter</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+  font-family: 'DM Sans', sans-serif; 
+  background: #FAFAF7; 
+  color: #2C2C2A;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+.poster {
+  width: 1200px;
+  max-width: 100%;
+}
+
+/* Title */
+.title-block { text-align: center; margin-bottom: 32px; }
+.title-block h1 { 
+  font-family: 'DM Serif Display', serif; 
+  font-size: 36px; 
+  font-weight: 400; 
+  color: #2C2C2A;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+.title-block .subtitle { 
+  font-size: 16px; 
+  color: #888780; 
+  font-style: italic;
+}
+
+/* Legend */
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 28px;
+  font-size: 12px;
+  color: #888780;
+}
+.legend-item { display: flex; align-items: center; gap: 8px; }
+.legend-line-solid { width: 24px; height: 2px; background: #534AB7; border-radius: 1px; }
+.legend-line-dashed { width: 24px; height: 0; border-top: 2px dashed #888780; }
+
+/* Zones */
+.zone {
+  border-radius: 20px;
+  padding: 28px 32px;
+  margin-bottom: 12px;
+  position: relative;
+}
+.zone-human { background: #E8F5EE; }
+.zone-partner { background: #FFF8F0; min-height: 200px; position: relative; }
+.zone-partner .singles-row { margin-bottom: 40px; }
+.zone-partner .pairs-row { margin-bottom: 40px; }
+.zone-partner .triples-row { margin-bottom: 40px; }
+#line-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
+.zone-gap { background: #FEF2F2; }
+.zone-ai { background: #EEEDFE; }
+
+.zone-label {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.zl-human { color: #085041; }
+.zl-partner { color: #854F0B; }
+.zl-gap { color: #993C1D; }
+.zl-ai { color: #3C3489; }
+
+.zone-desc {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.zone-desc.human-text { color: #0F6E56; }
+.zone-desc.human-ital { color: #085041; font-family: 'DM Serif Display', serif; font-style: italic; font-size: 13px; }
+.zone-desc.ai-text { color: #534AB7; }
+.zone-desc.ai-ital { color: #3C3489; font-family: 'DM Serif Display', serif; font-style: italic; font-size: 13px; }
+
+/* Connectors between zones */
+.connector-row {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  height: 16px;
+}
+.connector-dot {
+  width: 1px;
+  height: 16px;
+  border-left: 1px dashed #D3D1C7;
+}
+
+/* Row 1: Four singles */
+.singles-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.single-card {
+  border-radius: 12px;
+  padding: 16px 18px;
+  border: 2px solid;
+  position: relative;
+}
+.single-card .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+.single-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  padding-left: 20px;
+}
+.single-card .contribution {
+  font-size: 11px;
+  line-height: 1.6;
+}
+.single-card .contribution .label {
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+}
+.card-f { background: #E8F5EE; border-color: #0F6E56; }
+.card-f .dot { background: #0F6E56; }
+.card-f h3 { color: #085041; }
+.card-f .human-c { color: #0F6E56; }
+.card-f .ai-c { color: #534AB7; }
+
+.card-t { background: #EBF3FB; border-color: #185FA5; }
+.card-t .dot { background: #185FA5; }
+.card-t h3 { color: #0C447C; }
+.card-t .human-c { color: #185FA5; }
+.card-t .ai-c { color: #534AB7; }
+
+.card-p { background: #FFF5E6; border-color: #854F0B; }
+.card-p .dot { background: #854F0B; }
+.card-p h3 { color: #633806; }
+.card-p .human-c { color: #854F0B; }
+.card-p .ai-c { color: #534AB7; }
+
+.card-i { background: #EEEDFE; border-color: #534AB7; }
+.card-i .dot { background: #534AB7; }
+.card-i h3 { color: #3C3489; }
+.card-i .human-c { color: #534AB7; }
+.card-i .ai-c { color: #3C3489; }
+
+/* Row labels */
+.row-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.row-count {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #FFF7ED;
+  border: 1px solid #E8D5B8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #854F0B;
+  flex-shrink: 0;
+}
+.row-title {
+  font-size: 11px;
+  color: #888780;
+  font-style: italic;
+}
+
+/* Row 2: Six pairs */
+.pairs-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.pair-card {
+  background: #fff;
+  border: 1px solid #D3D1C7;
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+.pair-card h4 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #2C2C2A;
+  margin-bottom: 4px;
+}
+.pair-card .pair-desc {
+  font-size: 10.5px;
+  color: #888780;
+  line-height: 1.4;
+}
+.pair-card .pair-colors {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+.pair-card .pair-colors .pc-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+/* Row 3: Four triples */
+.triples-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.triple-card {
+  background: #FFF7ED;
+  border: 1px solid #E8D5B8;
+  border-radius: 10px;
+  padding: 10px 14px;
+  text-align: center;
+}
+.triple-card h4 {
+  font-size: 11px;
+  font-weight: 600;
+  color: #854F0B;
+}
+.triple-card .triple-dots {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+.triple-card .triple-dots .td {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+/* Row 4: Center */
+.center-card {
+  background: #FAECE7;
+  border: 2px solid #D85A30;
+  border-radius: 14px;
+  padding: 16px 24px;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto 16px;
+}
+.center-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #993C1D;
+  margin-bottom: 4px;
+}
+.center-card p {
+  font-size: 12px;
+  color: #712B13;
+}
+.center-card .all-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.center-card .all-dots .ad {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* Intent gap annotation */
+.intent-annotation {
+  text-align: center;
+  font-size: 11px;
+  color: #A32D2D;
+  font-style: italic;
+  margin: 8px 0 16px;
+}
+
+/* Adoption note */
+.adoption-note {
+  text-align: center;
+  font-size: 11px;
+  color: #888780;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+/* Gap zone content */
+.gap-row {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 16px;
+}
+.gap-card-solid {
+  background: #fff;
+  border: 2px solid #A32D2D;
+  border-radius: 12px;
+  padding: 14px 18px;
+  text-align: center;
+}
+.gap-card-solid h3 { font-size: 16px; font-weight: 600; color: #A32D2D; margin-bottom: 4px; }
+.gap-card-solid p { font-size: 11px; color: #791F1F; }
+
+.gap-card-dashed {
+  background: #fff;
+  border: 2px dashed #888780;
+  border-radius: 12px;
+  padding: 14px 18px;
+  text-align: center;
+}
+.gap-card-dashed h3 { font-size: 16px; font-weight: 600; color: #5F5E5A; margin-bottom: 4px; }
+.gap-card-dashed p { font-size: 11px; color: #888780; }
+
+/* AI zone content */
+.engines-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.engine-card {
+  border-radius: 10px;
+  padding: 14px 16px;
+  text-align: center;
+}
+.engine-solid { background: #fff; border: 2px solid #534AB7; }
+.engine-solid h4 { color: #3C3489; font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+.engine-solid p { color: #534AB7; font-size: 11px; }
+
+.engine-dashed { background: #fff; border: 2px dashed #888780; }
+.engine-dashed h4 { color: #5F5E5A; font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+.engine-dashed p { color: #888780; font-size: 11px; }
+
+/* Ground */
+.ground {
+  text-align: center;
+  padding-top: 24px;
+  margin-top: 16px;
+  border-top: 1px solid #E8E6E0;
+}
+.ground .premise {
+  font-family: 'DM Serif Display', serif;
+  font-size: 18px;
+  color: #5F5E5A;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.ground .permanent {
+  font-size: 12px;
+  color: #888780;
+  margin-bottom: 16px;
+}
+.ground .tagline {
+  font-size: 12px;
+  color: #B4B2A9;
+  letter-spacing: 1px;
+}
+
+/* Color dots */
+.bg-f { background: #0F6E56; }
+.bg-t { background: #185FA5; }
+.bg-p { background: #854F0B; }
+.bg-i { background: #534AB7; }
+</style>
+</head>
+<body>
+<div class="poster">
+  <!-- Title -->
+  <div class="title-block">
+    <h1>The Human Intelligence Partnership Charter</h1>
+    <div class="subtitle">Stop calling it artificial. Start building WITH intelligence.</div>
+  </div>
+
+  <!-- Legend -->
+  <div class="legend">
+    <div class="legend-item"><div class="legend-line-solid"></div> Today (observable)</div>
+    <div class="legend-item"><div class="legend-line-dashed"></div> Tomorrow (uncertain)</div>
+  </div>
+
+  <!-- ZONE 1: HUMAN -->
+  <div class="zone zone-human">
+    <div class="zone-label zl-human">Human intelligence</div>
+    <div class="zone-desc human-text">Judgment. Architecture. Governance. Values. Accountability.</div>
+    <div class="zone-desc human-ital">Operated for millennia. Can operate alone. The intelligence that decides what should happen and why.</div>
+  </div>
+
+  <div class="connector-row"><div class="connector-dot"></div><div class="connector-dot"></div><div class="connector-dot"></div></div>
+
+  <!-- ZONE 2: PARTNERSHIP -->
+  <div class="zone zone-partner" id="zone-partner">
+    <svg id="line-overlay" xmlns="http://www.w3.org/2000/svg"></svg>
+    <div class="zone-label zl-partner">The partnership</div>
+    <div class="zone-desc" style="color:#854F0B;margin-bottom:20px;">Where two intelligences meet. Four domains, six pairs, four triples, one center. 15 positions on the map.</div>
+
+    <!-- Row 1: Singles -->
+    <div class="row-header">
+      <div class="row-count">4</div>
+      <div class="row-title">Domains of partnership (each shows what human brings + what AI brings)</div>
+    </div>
+    <div class="singles-row" id="singles-row">
+      <div class="single-card card-f" id="s-f">
+        <div class="dot"></div>
+        <h3>Foundation</h3>
+        <div class="contribution">
+          <div class="human-c"><span class="label">Human:</span> judgment, design, direction, product vision, constraint definition</div>
+          <div class="ai-c"><span class="label">AI:</span> implementation, speed, iteration, code generation, restructuring</div>
+        </div>
+      </div>
+      <div class="single-card card-t" id="s-t">
+        <div class="dot"></div>
+        <h3>Tooling</h3>
+        <div class="contribution">
+          <div class="human-c"><span class="label">Human:</span> needs, workflows, ergonomics, capability gaps to fill</div>
+          <div class="ai-c"><span class="label">AI:</span> build capability during development. Zero AI dependency at runtime.</div>
+        </div>
+      </div>
+      <div class="single-card card-p" id="s-p">
+        <div class="dot"></div>
+        <h3>Pipeline</h3>
+        <div class="contribution">
+          <div class="human-c"><span class="label">Human:</span> data quality standards, curation intent, editorial judgment</div>
+          <div class="ai-c"><span class="label">AI:</span> enrichment, generation, synthesis. Users interact with output, not AI.</div>
+        </div>
+      </div>
+      <div class="single-card card-i" id="s-i">
+        <div class="dot"></div>
+        <h3>Integration</h3>
+        <div class="contribution">
+          <div class="human-c"><span class="label">Human:</span> analysis intent, domain logic, architectural decisions</div>
+          <div class="ai-c"><span class="label">AI:</span> reasoning alongside proprietary APIs, sensors, and live data feeds.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2: Pairs -->
+    <div class="row-header">
+      <div class="row-count">6</div>
+      <div class="row-title">Pairwise intersections (every domain connects to every other)</div>
+    </div>
+    <div class="pairs-row">
+      <div class="pair-card" id="p-ft">
+        <div class="pair-colors"><div class="pc-dot bg-f"></div><div class="pc-dot bg-t"></div></div>
+        <h4>Foundation + Tooling</h4>
+        <div class="pair-desc">Built with AI as partner, ships without AI dependency. The most defensible intersection.</div>
+      </div>
+      <div class="pair-card" id="p-fp">
+        <div class="pair-colors"><div class="pc-dot bg-f"></div><div class="pc-dot bg-p"></div></div>
+        <h4>Foundation + Pipeline</h4>
+        <div class="pair-desc">Designed the enrichment pipeline by hand. Human architects the data flow, AI generates within it.</div>
+      </div>
+      <div class="pair-card" id="p-fi">
+        <div class="pair-colors"><div class="pc-dot bg-f"></div><div class="pc-dot bg-i"></div></div>
+        <h4>Foundation + Integration</h4>
+        <div class="pair-desc">Architected the system AND AI works inside it at runtime. Full-stack partnership.</div>
+      </div>
+      <div class="pair-card" id="p-tp">
+        <div class="pair-colors"><div class="pc-dot bg-t"></div><div class="pc-dot bg-p"></div></div>
+        <h4>Tooling + Pipeline</h4>
+        <div class="pair-desc">Tools that surface AI-curated insights without calling AI at runtime. Enriched data, human interface.</div>
+      </div>
+      <div class="pair-card" id="p-ti">
+        <div class="pair-colors"><div class="pc-dot bg-t"></div><div class="pc-dot bg-i"></div></div>
+        <h4>Tooling + Integration</h4>
+        <div class="pair-desc">Human curation tools inside AI-integrated systems. Annotator on top of an AI platform.</div>
+      </div>
+      <div class="pair-card" id="p-pi">
+        <div class="pair-colors"><div class="pc-dot bg-p"></div><div class="pc-dot bg-i"></div></div>
+        <h4>Pipeline + Integration</h4>
+        <div class="pair-desc">Data enrichment feeds AI reasoning at runtime. The richest data architecture intersection.</div>
+      </div>
+    </div>
+
+    <!-- Row 3: Triples -->
+    <div class="row-header">
+      <div class="row-count">4</div>
+      <div class="row-title">Triple intersections (operating across three domains simultaneously)</div>
+    </div>
+    <div class="triples-row">
+      <div class="triple-card" id="t-ftp">
+        <div class="triple-dots"><div class="td bg-f"></div><div class="td bg-t"></div><div class="td bg-p"></div></div>
+        <h4>F + T + P</h4>
+      </div>
+      <div class="triple-card" id="t-fti">
+        <div class="triple-dots"><div class="td bg-f"></div><div class="td bg-t"></div><div class="td bg-i"></div></div>
+        <h4>F + T + I</h4>
+      </div>
+      <div class="triple-card" id="t-fpi">
+        <div class="triple-dots"><div class="td bg-f"></div><div class="td bg-p"></div><div class="td bg-i"></div></div>
+        <h4>F + P + I</h4>
+      </div>
+      <div class="triple-card" id="t-tpi">
+        <div class="triple-dots"><div class="td bg-t"></div><div class="td bg-p"></div><div class="td bg-i"></div></div>
+        <h4>T + P + I</h4>
+      </div>
+    </div>
+
+    <!-- Row 4: Center -->
+    <div class="center-card" id="center">
+      <div class="all-dots">
+        <div class="ad bg-f"></div><div class="ad bg-t"></div><div class="ad bg-p"></div><div class="ad bg-i"></div>
+      </div>
+      <h3>Full partnership</h3>
+      <p>All four domains. The rarest position. The center of the charter.</p>
+    </div>
+
+    <div class="intent-annotation">The intent gap permeates every domain, every pair, every triple, and the center above.</div>
+    <div class="adoption-note">15 positions total. Companies and individuals can map where they are and where to go next. Add a 5th domain: 31 positions. The charter blooms.</div>
+  </div>
+
+  <div class="connector-row"><div class="connector-dot"></div><div class="connector-dot"></div></div>
+
+  <!-- ZONE 3: GAP -->
+  <div class="zone zone-gap">
+    <div class="zone-label zl-gap">The current gap</div>
+    <div class="gap-row">
+      <div class="gap-card-solid">
+        <h3>Intent layer</h3>
+        <p>The structural approach we can see today. For current LLM-based AI.</p>
+      </div>
+      <div class="gap-card-dashed">
+        <h3>Unknown</h3>
+        <p>Solutions we have not imagined yet, for AI that does not exist yet. Future models may close this gap natively.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="connector-row"><div class="connector-dot"></div><div class="connector-dot"></div><div class="connector-dot"></div><div class="connector-dot"></div></div>
+
+  <!-- ZONE 4: AI -->
+  <div class="zone zone-ai">
+    <div class="zone-label zl-ai">AI intelligence</div>
+    <div class="engines-row">
+      <div class="engine-card engine-solid">
+        <h4>LLMs</h4>
+        <p>Claude, GPT, Gemini, Grok</p>
+      </div>
+      <div class="engine-card engine-dashed">
+        <h4>Scaled LLMs</h4>
+        <p>Altman, Amodei</p>
+      </div>
+      <div class="engine-card engine-dashed">
+        <h4>World models</h4>
+        <p>LeCun, AMI Labs</p>
+      </div>
+      <div class="engine-card engine-dashed">
+        <h4>New ideas</h4>
+        <p>Sutskever, SSI</p>
+      </div>
+    </div>
+    <div class="zone-desc ai-ital">Powerful but cannot operate with purpose alone.</div>
+  </div>
+
+  <!-- Ground -->
+  <div class="ground">
+    <div class="premise">"There is just intelligence. Two forms of it. Partnering."</div>
+    <div class="permanent">The only permanent premise. Everything above is a snapshot of March 2026.</div>
+    <div class="tagline">Tied at the HIP  ·  hipcharter.com  ·  Nikhil Singhal, 2026</div>
+  </div>
+</div>
+<script>
+document.fonts.ready.then(() => {
+  const zone = document.getElementById('zone-partner');
+  const svg = document.getElementById('line-overlay');
+  const zr = zone.getBoundingClientRect();
+  
+  svg.setAttribute('viewBox', `0 0 ${zone.offsetWidth} ${zone.offsetHeight}`);
+  svg.style.width = zone.offsetWidth + 'px';
+  svg.style.height = zone.offsetHeight + 'px';
+  
+  const colors = { f: '#0F6E56', t: '#185FA5', p: '#854F0B', i: '#534AB7' };
+  
+  function pos(id) {
+    const el = document.getElementById(id);
+    const r = el.getBoundingClientRect();
+    return {
+      cx: r.left + r.width/2 - zr.left,
+      top: r.top - zr.top,
+      bot: r.bottom - zr.top,
+      left: r.left - zr.left,
+      right: r.right - zr.left
+    };
+  }
+  
+  function drawLine(fromId, toId, color, offset) {
+    const from = pos(fromId);
+    const to = pos(toId);
+    const x1 = from.cx + (offset || 0);
+    const y1 = from.bot;
+    const x2 = to.cx + (offset || 0);
+    const y2 = to.top;
+    const my = y1 + (y2 - y1) * 0.5;
+    
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', `M ${x1} ${y1} C ${x1} ${my}, ${x2} ${my}, ${x2} ${y2}`);
+    path.setAttribute('stroke', color);
+    path.setAttribute('stroke-width', '2');
+    path.setAttribute('fill', 'none');
+    path.setAttribute('opacity', '0.4');
+    svg.appendChild(path);
+  }
+  
+  // Singles → Pairs (two colored lines per pair, one from each parent)
+  // F+T: from F and T
+  drawLine('s-f', 'p-ft', colors.f, -4);
+  drawLine('s-t', 'p-ft', colors.t, 4);
+  // F+P: from F and P
+  drawLine('s-f', 'p-fp', colors.f, -4);
+  drawLine('s-p', 'p-fp', colors.p, 4);
+  // F+I: from F and I
+  drawLine('s-f', 'p-fi', colors.f, -4);
+  drawLine('s-i', 'p-fi', colors.i, 4);
+  // T+P: from T and P
+  drawLine('s-t', 'p-tp', colors.t, -4);
+  drawLine('s-p', 'p-tp', colors.p, 4);
+  // T+I: from T and I
+  drawLine('s-t', 'p-ti', colors.t, -4);
+  drawLine('s-i', 'p-ti', colors.i, 4);
+  // P+I: from P and I
+  drawLine('s-p', 'p-pi', colors.p, -4);
+  drawLine('s-i', 'p-pi', colors.i, 4);
+  
+  // Pairs → Triples (each pair connects to triples that contain both its parents)
+  // F+T+P gets lines from F+T, F+P, T+P
+  drawLine('p-ft', 't-ftp', colors.f, -3);
+  drawLine('p-fp', 't-ftp', colors.p, 0);
+  drawLine('p-tp', 't-ftp', colors.t, 3);
+  // F+T+I gets lines from F+T, F+I, T+I
+  drawLine('p-ft', 't-fti', colors.f, -3);
+  drawLine('p-fi', 't-fti', colors.i, 0);
+  drawLine('p-ti', 't-fti', colors.t, 3);
+  // F+P+I gets lines from F+P, F+I, P+I
+  drawLine('p-fp', 't-fpi', colors.f, -3);
+  drawLine('p-fi', 't-fpi', colors.i, 0);
+  drawLine('p-pi', 't-fpi', colors.p, 3);
+  // T+P+I gets lines from T+P, T+I, P+I
+  drawLine('p-tp', 't-tpi', colors.t, -3);
+  drawLine('p-ti', 't-tpi', colors.i, 0);
+  drawLine('p-pi', 't-tpi', colors.p, 3);
+  
+  // Triples → Center
+  drawLine('t-ftp', 'center', colors.f, -6);
+  drawLine('t-fti', 'center', colors.t, -2);
+  drawLine('t-fpi', 'center', colors.p, 2);
+  drawLine('t-tpi', 'center', colors.i, 6);
+});
+</script>
+</body>
+</html>

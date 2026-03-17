@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>v7d Split Color Pair Cards Test</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+  font-family: 'DM Sans', sans-serif; 
+  background: #FAFAF7; 
+  color: #2C2C2A;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+.container { width: 1200px; }
+
+h2 { font-family: 'DM Serif Display', serif; font-weight: 400; margin-bottom: 24px; color: #2C2C2A; }
+h3 { font-size: 14px; margin-bottom: 16px; color: #888780; }
+
+/* Singles row for reference */
+.singles-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.single-card {
+  border-radius: 12px;
+  padding: 16px 18px;
+  border: 2px solid;
+  position: relative;
+}
+.single-card h4 { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+.single-card .desc { font-size: 11px; line-height: 1.5; }
+.card-f { background: #E8F5EE; border-color: #0F6E56; }
+.card-f h4 { color: #085041; }
+.card-t { background: #EBF3FB; border-color: #185FA5; }
+.card-t h4 { color: #0C447C; }
+.card-p { background: #FFF5E6; border-color: #854F0B; }
+.card-p h4 { color: #633806; }
+.card-i { background: #EEEDFE; border-color: #534AB7; }
+.card-i h4 { color: #3C3489; }
+
+/* Pair cards with organic split */
+.pairs-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.pair-card {
+  border-radius: 12px;
+  padding: 12px 16px;
+  border: 1px solid #D3D1C7;
+  position: relative;
+  overflow: hidden;
+  min-height: 80px;
+}
+.pair-card .pair-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+}
+.pair-card .pair-content {
+  position: relative;
+  z-index: 1;
+}
+.pair-card h4 { font-size: 12px; font-weight: 600; color: #2C2C2A; margin-bottom: 4px; }
+.pair-card .pair-desc { font-size: 10.5px; color: #5F5E5A; line-height: 1.4; }
+
+/* Triple cards */
+.triples-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.triple-card {
+  border-radius: 12px;
+  padding: 12px 16px;
+  border: 1px solid #E8D5B8;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  min-height: 50px;
+}
+.triple-card .triple-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+}
+.triple-card h4 { 
+  font-size: 11px; font-weight: 600; color: #854F0B; 
+  position: relative; z-index: 1;
+}
+
+/* Center card */
+.center-card {
+  border-radius: 16px;
+  padding: 20px;
+  border: 2px solid #D85A30;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto 40px;
+}
+.center-card .center-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+}
+.center-card h3 { font-size: 18px; font-weight: 600; color: #D85A30; position: relative; z-index: 1; margin-bottom: 4px; }
+.center-card p { font-size: 12px; color: #854F0B; position: relative; z-index: 1; }
+
+.section-label { font-size: 11px; color: #888780; font-style: italic; margin-bottom: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h2>v7d: Split-Color Cards (organic wave boundary)</h2>
+  
+  <h3>Row 1: Singles (unchanged)</h3>
+  <div class="singles-row">
+    <div class="single-card card-f"><h4>Foundation</h4><div class="desc">Human: judgment, design, direction<br>AI: implementation, speed, iteration</div></div>
+    <div class="single-card card-t"><h4>Tooling</h4><div class="desc">Human: needs, workflows, ergonomics<br>AI: build capability. Zero AI at runtime.</div></div>
+    <div class="single-card card-p"><h4>Pipeline</h4><div class="desc">Human: data quality, curation intent<br>AI: enrichment, generation, synthesis</div></div>
+    <div class="single-card card-i"><h4>Integration</h4><div class="desc">Human: analysis intent, domain logic<br>AI: reasoning alongside live data feeds</div></div>
+  </div>
+
+  <h3>Row 2: Pairs (organic split backgrounds)</h3>
+  <div class="pairs-row">
+    <!-- F+T: wave starts ~67% (268) at top, ends ~33% (132) at bottom -->
+    <div class="pair-card">
+      <svg class="pair-bg" viewBox="0 0 400 100" preserveAspectRatio="none">
+        <defs>
+          <clipPath id="left-ft"><path d="M0,0 L268,0 C258,20 240,40 220,55 C195,72 165,82 145,100 L0,100 Z"/></clipPath>
+          <clipPath id="right-ft"><path d="M268,0 C258,20 240,40 220,55 C195,72 165,82 145,100 L400,100 L400,0 Z"/></clipPath>
+        </defs>
+        <rect width="400" height="100" fill="#E8F5EE" clip-path="url(#left-ft)"/>
+        <rect width="400" height="100" fill="#EBF3FB" clip-path="url(#right-ft)"/>
+      </svg>
+      <div class="pair-content">
+        <h4>Foundation + Tooling</h4>
+        <div class="pair-desc">Built with AI as partner, ships without AI dependency. The most defensible intersection.</div>
+      </div>
+    </div>
+    <!-- F+P -->
+    <div class="pair-card">
+      <svg class="pair-bg" viewBox="0 0 400 100" preserveAspectRatio="none">
+        <defs>
+          <clipPath id="left-fp"><path d="M0,0 L272,0 C260,18 245,38 225,55 C200,75 170,88 140,100 L0,100 Z"/></clipPath>
+          <clipPath id="right-fp"><path d="M272,0 C260,18 245,38 225,55 C200,75 170,88 140,100 L400,100 L400,0 Z"/></clipPath>
+        </defs>
+        <rect width="400" height="100" fill="#E8F5EE" clip-path="url(#left-fp)"/>
+        <rect width="400" height="100" fill="#FFF5E6" clip-path="url(#right-fp)"/>
+      </svg>
+      <div class="pair-content">
+        <h4>Foundation + Pipeline</h4>
+        <div class="pair-desc">Designed the enrichment pipeline by hand. Human architects the data flow, AI generates within it.</div>
+      </div>
+    </div>
+    <!-- F+I -->
+    <div class="pair-card">
+      <svg class="pair-bg" viewBox="0 0 400 100" preserveAspectRatio="none">
+        <defs>
+          <clipPath id="left-fi"><path d="M0,0 L265,0 C255,22 238,42 218,58 C192,76 162,88 138,100 L0,100 Z"/></clipPath>
+          <clipPath id="right-fi"><path d="M265,0 C255,22 238,42 218,58 C192,76 162,88 138,100 L400,100 L400,0 Z"/></clipPath>
+        </defs>
+        <rect width="400" height="100" fill="#E8F5EE" clip-path="url(#left-fi)"/>
+        <rect width="400" height="100" fill="#EEEDFE" clip-path="url(#right-fi)"/>
+      </svg>
+      <div class="pair-content">
+        <h4>Foundation + Integration</h4>
+        <div class="pair-desc">Architected the system AND AI works inside it at runtime. Full-stack partnership.</div>
+      </div>
+    </div>
+    <!-- T+P -->
+    <div class="pair-card">
+      <svg class="pair-bg" viewBox="0 0 400 100" preserveAspectRatio="none">
+        <defs>
+          <clipPath id="left-tp"><path d="M0,0 L270,0 C262,22 248,42 228,58 C205,74 175,86 142,100 L0,100 Z"/></clipPath>
+          <clipPath id="right-tp"><path d="M270,0 C262,22 248,42 228,58 C205,74 175,86 142,100 L400,100 L400,0 Z"/></clipPath>
+        </defs>
+        <rect width="400" height="100" fill="#EBF3FB" clip-path="url(#left-tp)"/>
+        <rect width="400" height="100" fill="#FFF5E6" clip-path="url(#right-tp)"/>
+      </svg>
+      <div class="pair-content">
+        <h4>Tooling + Pipeline</h4>
+        <div class="pair-desc">Tools that surface AI-curated insights without calling AI at runtime. Enriched data, human interface.</div>
+      </div>
+    </div>
+    <!-- T+I -->
+    <div class="pair-card">
+      <svg class="pair-bg" viewBox="0 0 400 100" preserveAspectRatio="none">
+        <defs>
+          <clipPath id="left-ti"><path d="M0,0 L260,0 C252,20 235,42 215,58 C190,76 160,88 135,100 L0,100 Z"/></clipPath>
+          <clipPath id="right-ti"><path d="M260,0 C252,20 235,42 215,58 C190,76 160,88 135,100 L400,100 L400,0 Z"/></clipPath>
+        </defs>
+        <rect width="400" height="100" fill="#EBF3FB" clip-path="url(#left-ti)"/>
+        <rect width="400" height="100" fill="#EEEDFE" clip-path="url(#right-ti)"/>
+      </svg>
+      <div class="pair-content">
+        <h4>Tooling + Integration</h4>
+        <div class="pair-desc">Human curation tools inside AI-integrated systems. Annotator on top of an AI platform.</div>
+      </div>
+    </div>
+    <!-- P+I -->
+    <div class="pair-card">
+      <svg class="pair-bg" viewBox="0 0 400 100" preserveAspectRatio="none">
+        <defs>
+          <clipPath id="left-pi"><path d="M0,0 L275,0 C265,20 250,40 230,56 C208,72 178,85 148,100 L0,100 Z"/></clipPath>
+          <clipPath id="right-pi"><path d="M275,0 C265,20 250,40 230,56 C208,72 178,85 148,100 L400,100 L400,0 Z"/></clipPath>
+        </defs>
+        <rect width="400" height="100" fill="#FFF5E6" clip-path="url(#left-pi)"/>
+        <rect width="400" height="100" fill="#EEEDFE" clip-path="url(#right-pi)"/>
+      </svg>
+      <div class="pair-content">
+        <h4>Pipeline + Integration</h4>
+        <div class="pair-desc">Data enrichment feeds AI reasoning at runtime. The richest data architecture intersection.</div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Row 3: Triples (three-way split)</h3>
+  <div class="triples-row">
+    <div class="triple-card">
+      <svg class="triple-bg" viewBox="0 0 300 60" preserveAspectRatio="none">
+        <defs>
+          <clipPath id="t1-left"><path d="M0,0 L175,0 C165,15 145,30 125,42 C110,50 95,55 80,60 L0,60 Z"/></clipPath>
+          <clipPath id="t1-mid"><path d="M175,0 C165,15 145,30 125,42 C110,50 95,55 80,60 L200,60 C210,48 225,35 240,25 C250,18 260,10 270,0 Z"/></clipPath>
+          <clipPath id="t1-right"><path d="M270,0 C260,10 250,18 240,25 C225,35 210,48 200,60 L300,60 L300,0 Z"/></clipPath>
+        </defs>
+        <rect width="300" height="60" fill="#E8F5EE" clip-path="url(#t1-left)"/>
+        <rect width="300" height="60" fill="#EBF3FB" clip-path="url(#t1-mid)"/>
+        <rect width="300" height="60" fill="#FFF5E6" clip-path="url(#t1-right)"/>
+      </svg>
+      <h4>F + T + P</h4>
+    </div>
+    <div class="triple-card">
+      <svg class="triple-bg" viewBox="0 0 300 60" preserveAspectRatio="none">
+        <defs>
+          <clipPath id="t2-left"><path d="M0,0 L180,0 C168,15 150,30 130,42 C115,50 100,55 85,60 L0,60 Z"/></clipPath>
+          <clipPath id="t2-mid"><path d="M180,0 C168,15 150,30 130,42 C115,50 100,55 85,60 L195,60 C208,48 220,35 235,25 C248,15 258,8 265,0 Z"/></clipPath>
+          <clipPath id="t2-right"><path d="M265,0 C258,8 248,15 235,25 C220,35 208,48 195,60 L300,60 L300,0 Z"/></clipPath>
+        </defs>
+        <rect width="300" height="60" fill="#E8F5EE" clip-path="url(#t2-left)"/>
+        <rect width="300" height="60" fill="#EBF3FB" clip-path="url(#t2-mid)"/>
+        <rect width="300" height="60" fill="#EEEDFE" clip-path="url(#t2-right)"/>
+      </svg>
+      <h4>F + T + I</h4>
+    </div>
+    <div class="triple-card">
+      <svg class="triple-bg" viewBox="0 0 300 60" preserveAspectRatio="none">
+        <defs>
+          <clipPath id="t3-left"><path d="M0,0 L170,0 C160,15 142,30 122,42 C108,50 92,55 78,60 L0,60 Z"/></clipPath>
+          <clipPath id="t3-mid"><path d="M170,0 C160,15 142,30 122,42 C108,50 92,55 78,60 L205,60 C215,45 228,32 242,22 C252,14 262,7 272,0 Z"/></clipPath>
+          <clipPath id="t3-right"><path d="M272,0 C262,7 252,14 242,22 C228,32 215,45 205,60 L300,60 L300,0 Z"/></clipPath>
+        </defs>
+        <rect width="300" height="60" fill="#E8F5EE" clip-path="url(#t3-left)"/>
+        <rect width="300" height="60" fill="#FFF5E6" clip-path="url(#t3-mid)"/>
+        <rect width="300" height="60" fill="#EEEDFE" clip-path="url(#t3-right)"/>
+      </svg>
+      <h4>F + P + I</h4>
+    </div>
+    <div class="triple-card">
+      <svg class="triple-bg" viewBox="0 0 300 60" preserveAspectRatio="none">
+        <defs>
+          <clipPath id="t4-left"><path d="M0,0 L178,0 C166,15 148,30 128,42 C112,50 98,55 82,60 L0,60 Z"/></clipPath>
+          <clipPath id="t4-mid"><path d="M178,0 C166,15 148,30 128,42 C112,50 98,55 82,60 L198,60 C210,46 225,33 238,24 C250,15 260,8 268,0 Z"/></clipPath>
+          <clipPath id="t4-right"><path d="M268,0 C260,8 250,15 238,24 C225,33 210,46 198,60 L300,60 L300,0 Z"/></clipPath>
+        </defs>
+        <rect width="300" height="60" fill="#EBF3FB" clip-path="url(#t4-left)"/>
+        <rect width="300" height="60" fill="#FFF5E6" clip-path="url(#t4-mid)"/>
+        <rect width="300" height="60" fill="#EEEDFE" clip-path="url(#t4-right)"/>
+      </svg>
+      <h4>T + P + I</h4>
+    </div>
+  </div>
+
+  <h3>Row 4: Center (four-way radial)</h3>
+  <div class="center-card">
+    <svg class="center-bg" viewBox="0 0 500 80" preserveAspectRatio="none">
+      <defs>
+        <clipPath id="c-q1"><path d="M0,0 L330,0 C318,12 300,25 278,35 C260,42 240,46 220,48 L0,48 Z"/></clipPath>
+        <clipPath id="c-q2"><path d="M330,0 L500,0 L500,48 L350,48 C365,42 380,35 392,28 C410,18 420,8 430,0 Z"/></clipPath>
+        <clipPath id="c-q3"><path d="M0,48 L220,48 C200,52 178,58 155,65 C135,72 115,76 100,80 L0,80 Z"/></clipPath>
+        <clipPath id="c-q4"><path d="M220,48 C240,52 260,56 280,60 C310,66 340,72 350,48 L500,48 L500,80 L100,80 C115,76 135,72 155,65 C178,58 200,52 220,48 Z"/></clipPath>
+      </defs>
+      <rect width="500" height="80" fill="#E8F5EE" clip-path="url(#c-q1)"/>
+      <rect width="500" height="80" fill="#EBF3FB" clip-path="url(#c-q2)"/>
+      <rect width="500" height="80" fill="#FFF5E6" clip-path="url(#c-q3)"/>
+      <rect width="500" height="80" fill="#EEEDFE" clip-path="url(#c-q4)"/>
+    </svg>
+    <h3>Full partnership</h3>
+    <p>All four domains. The rarest position. The center of the charter.</p>
+  </div>
+
+</div>
+</body>
+</html>

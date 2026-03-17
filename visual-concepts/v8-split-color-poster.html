@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Human Intelligence Partnership Charter</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+  font-family: 'DM Sans', sans-serif; 
+  background: #FAFAF7; 
+  color: #2C2C2A;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+.poster {
+  width: 1200px;
+  max-width: 100%;
+}
+
+/* Title */
+.title-block { text-align: center; margin-bottom: 32px; }
+.title-block h1 { 
+  font-family: 'DM Serif Display', serif; 
+  font-size: 36px; 
+  font-weight: 400; 
+  color: #2C2C2A;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+.title-block .subtitle { 
+  font-size: 16px; 
+  color: #888780; 
+  font-style: italic;
+}
+
+/* Legend */
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 28px;
+  font-size: 12px;
+  color: #888780;
+}
+.legend-item { display: flex; align-items: center; gap: 8px; }
+.legend-line-solid { width: 24px; height: 2px; background: #534AB7; border-radius: 1px; }
+.legend-line-dashed { width: 24px; height: 0; border-top: 2px dashed #888780; }
+
+/* Zones */
+.zone {
+  border-radius: 20px;
+  padding: 28px 32px;
+  margin-bottom: 12px;
+  position: relative;
+}
+.zone-human { background: #E8F5EE; }
+.zone-partner { background: #FFFFFF; min-height: 200px; }
+.zone-gap { background: #FEF2F2; }
+.zone-ai { background: #EEEDFE; }
+
+.zone-label {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.zl-human { color: #085041; }
+.zl-partner { color: #854F0B; }
+.zl-gap { color: #993C1D; }
+.zl-ai { color: #3C3489; }
+
+.zone-desc {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.zone-desc.human-text { color: #0F6E56; }
+.zone-desc.human-ital { color: #085041; font-family: 'DM Serif Display', serif; font-style: italic; font-size: 13px; }
+.zone-desc.ai-text { color: #534AB7; }
+.zone-desc.ai-ital { color: #3C3489; font-family: 'DM Serif Display', serif; font-style: italic; font-size: 13px; }
+
+/* Connectors between zones */
+.connector-row {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  height: 16px;
+}
+.connector-dot {
+  width: 1px;
+  height: 16px;
+  border-left: 1px dashed #D3D1C7;
+}
+
+/* Row 1: Four singles */
+.singles-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.single-card {
+  border-radius: 12px;
+  padding: 16px 18px;
+  border: 2px solid;
+  position: relative;
+}
+.single-card .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+.single-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  padding-left: 20px;
+}
+.single-card .contribution {
+  font-size: 11px;
+  line-height: 1.6;
+}
+.single-card .contribution .label {
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+}
+.card-f { background: #E8F5EE; border-color: #0F6E56; }
+.card-f .dot { background: #0F6E56; }
+.card-f h3 { color: #085041; }
+.card-f .human-c { color: #0F6E56; }
+.card-f .ai-c { color: #534AB7; }
+
+.card-t { background: #EBF3FB; border-color: #185FA5; }
+.card-t .dot { background: #185FA5; }
+.card-t h3 { color: #0C447C; }
+.card-t .human-c { color: #185FA5; }
+.card-t .ai-c { color: #534AB7; }
+
+.card-p { background: #FFF5E6; border-color: #854F0B; }
+.card-p .dot { background: #854F0B; }
+.card-p h3 { color: #633806; }
+.card-p .human-c { color: #854F0B; }
+.card-p .ai-c { color: #534AB7; }
+
+.card-i { background: #EEEDFE; border-color: #534AB7; }
+.card-i .dot { background: #534AB7; }
+.card-i h3 { color: #3C3489; }
+.card-i .human-c { color: #534AB7; }
+.card-i .ai-c { color: #3C3489; }
+
+/* Row labels */
+.row-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.row-count {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #FFF7ED;
+  border: 1px solid #E8D5B8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #854F0B;
+  flex-shrink: 0;
+}
+.row-title {
+  font-size: 11px;
+  color: #888780;
+  font-style: italic;
+}
+
+/* Row 2: Six pairs with split color */
+.pairs-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.pair-card {
+  border: 1px solid #D3D1C7;
+  border-radius: 10px;
+  padding: 10px 14px;
+  position: relative;
+  overflow: hidden;
+  min-height: 70px;
+}
+.pair-card .pair-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+}
+.pair-card .pair-content {
+  position: relative;
+  z-index: 1;
+}
+.pair-card h4 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #2C2C2A;
+  margin-bottom: 4px;
+}
+.pair-card .pair-desc {
+  font-size: 10.5px;
+  color: #5F5E5A;
+  line-height: 1.4;
+}
+
+/* Row 3: Four triples with three-way split */
+.triples-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.triple-card {
+  border: 1px solid #E8D5B8;
+  border-radius: 10px;
+  padding: 10px 14px;
+  position: relative;
+  overflow: hidden;
+  min-height: 70px;
+}
+.triple-card .triple-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+}
+.triple-card .triple-content {
+  position: relative;
+  z-index: 1;
+}
+.triple-card h4 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #854F0B;
+  margin-bottom: 4px;
+}
+.triple-card .triple-desc {
+  font-size: 10.5px;
+  color: #5F5E5A;
+  line-height: 1.4;
+}
+
+/* Row 4: Center with four-way split */
+.center-card {
+  border: 2px solid #D85A30;
+  border-radius: 14px;
+  padding: 16px 24px;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 16px;
+  position: relative;
+  overflow: hidden;
+}
+.center-card .center-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+}
+.center-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #993C1D;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
+}
+.center-card .center-main {
+  font-size: 11px;
+  color: #5F5E5A;
+  line-height: 1.5;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 8px;
+}
+.center-card .center-closing {
+  font-size: 12px;
+  color: #993C1D;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+/* Intent gap annotation */
+.intent-annotation {
+  text-align: center;
+  font-size: 11px;
+  color: #A32D2D;
+  font-style: italic;
+  margin: 8px 0 16px;
+}
+.adoption-note {
+  text-align: center;
+  font-size: 11px;
+  color: #888780;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+/* Gap zone content */
+.gap-row {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 16px;
+}
+.gap-card-solid {
+  background: #fff;
+  border: 2px solid #A32D2D;
+  border-radius: 12px;
+  padding: 14px 18px;
+  text-align: center;
+}
+.gap-card-solid h3 { font-size: 16px; font-weight: 600; color: #A32D2D; margin-bottom: 4px; }
+.gap-card-solid p { font-size: 11px; color: #791F1F; }
+
+.gap-card-dashed {
+  background: #fff;
+  border: 2px dashed #888780;
+  border-radius: 12px;
+  padding: 14px 18px;
+  text-align: center;
+}
+.gap-card-dashed h3 { font-size: 16px; font-weight: 600; color: #5F5E5A; margin-bottom: 4px; }
+.gap-card-dashed p { font-size: 11px; color: #888780; }
+
+/* AI zone content */
+.engines-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.engine-card {
+  border-radius: 10px;
+  padding: 14px 16px;
+  text-align: center;
+}
+.engine-solid { background: #fff; border: 2px solid #534AB7; }
+.engine-solid h4 { color: #3C3489; font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+.engine-solid p { color: #534AB7; font-size: 11px; }
+
+.engine-dashed { background: #fff; border: 2px dashed #888780; }
+.engine-dashed h4 { color: #5F5E5A; font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+.engine-dashed p { color: #888780; font-size: 11px; }
+
+/* Ground */
+.ground {
+  text-align: center;
+  padding-top: 24px;
+  margin-top: 16px;
+  border-top: 1px solid #E8E6E0;
+}
+.ground .premise {
+  font-family: 'DM Serif Display', serif;
+  font-size: 18px;
+  color: #5F5E5A;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.ground .permanent {
+  font-size: 12px;
+  color: #888780;
+  margin-bottom: 16px;
+}
+.ground .tagline {
+  font-size: 12px;
+  color: #B4B2A9;
+  letter-spacing: 1px;
+}
+
+/* Color dots */
+.bg-f { background: #0F6E56; }
+.bg-t { background: #185FA5; }
+.bg-p { background: #854F0B; }
+.bg-i { background: #534AB7; }
+</style>
+</head>
+<body>
+<div class="poster">
+  <!-- Title -->
+  <div class="title-block">
+    <h1>The Human Intelligence Partnership Charter</h1>
+    <div class="subtitle">Stop calling it artificial. Start building WITH intelligence.</div>
+  </div>
+
+  <!-- Legend -->
+  <div class="legend">
+    <div class="legend-item"><div class="legend-line-solid"></div> Today (observable)</div>
+    <div class="legend-item"><div class="legend-line-dashed"></div> Tomorrow (uncertain)</div>
+  </div>
+
+  <!-- ZONE 1: HUMAN -->
+  <div class="zone zone-human">
+    <div class="zone-label zl-human">Human intelligence</div>
+    <div class="zone-desc human-text">Judgment. Architecture. Governance. Values. Accountability.</div>
+    <div class="zone-desc human-ital">Operated for millennia. Can operate alone. The intelligence that decides what should happen and why.</div>
+  </div>
+
+  <div class="connector-row"><div class="connector-dot"></div><div class="connector-dot"></div><div class="connector-dot"></div></div>
+
+  <!-- ZONE 2: PARTNERSHIP -->
+  <div class="zone zone-partner">
+    <div class="zone-label zl-partner">The partnership</div>
+    <div class="zone-desc" style="color:#854F0B;margin-bottom:20px;">Where two intelligences meet. Four domains, six pairs, four triples, one center. 15 positions on the map.</div>
+
+    <!-- Row 1: Singles -->
+    <div class="row-header">
+      <div class="row-count">4</div>
+      <div class="row-title">Domains of partnership (each shows what human brings + what AI brings)</div>
+    </div>
+    <div class="singles-row">
+      <div class="single-card card-f">
+        <div class="dot"></div>
+        <h3>Foundation</h3>
+        <div class="contribution">
+          <div class="human-c"><span class="label">Human:</span> judgment, design, direction, product vision, constraint definition</div>
+          <div class="ai-c"><span class="label">AI:</span> implementation, speed, iteration, code generation, restructuring</div>
+        </div>
+      </div>
+      <div class="single-card card-t">
+        <div class="dot"></div>
+        <h3>Tooling</h3>
+        <div class="contribution">
+          <div class="human-c"><span class="label">Human:</span> needs, workflows, ergonomics, capability gaps to fill</div>
+          <div class="ai-c"><span class="label">AI:</span> build capability during development. Zero AI dependency at runtime.</div>
+        </div>
+      </div>
+      <div class="single-card card-p">
+        <div class="dot"></div>
+        <h3>Pipeline</h3>
+        <div class="contribution">
+          <div class="human-c"><span class="label">Human:</span> data quality standards, curation intent, editorial judgment</div>
+          <div class="ai-c"><span class="label">AI:</span> enrichment, generation, synthesis. Users interact with output, not AI.</div>
+        </div>
+      </div>
+      <div class="single-card card-i">
+        <div class="dot"></div>
+        <h3>Integration</h3>
+        <div class="contribution">
+          <div class="human-c"><span class="label">Human:</span> analysis intent, domain logic, architectural decisions</div>
+          <div class="ai-c"><span class="label">AI:</span> reasoning alongside proprietary APIs, sensors, and live data feeds.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2: Pairs (split-color backgrounds) -->
+    <div class="row-header">
+      <div class="row-count">6</div>
+      <div class="row-title">Pairwise intersections (every domain connects to every other)</div>
+    </div>
+    <div class="pairs-row">
+      <div class="pair-card">
+        <svg class="pair-bg" viewBox="0 0 400 100" preserveAspectRatio="none">
+          <defs><clipPath id="l-ft"><path d="M0,0 L268,0 C258,20 240,40 220,55 C195,72 165,82 145,100 L0,100 Z"/></clipPath><clipPath id="r-ft"><path d="M268,0 C258,20 240,40 220,55 C195,72 165,82 145,100 L400,100 L400,0 Z"/></clipPath></defs>
+          <rect width="400" height="100" fill="#E8F5EE" clip-path="url(#l-ft)"/><rect width="400" height="100" fill="#EBF3FB" clip-path="url(#r-ft)"/>
+        </svg>
+        <div class="pair-content"><h4>Foundation + Tooling</h4><div class="pair-desc">Built with AI as partner, ships without AI dependency. The most defensible intersection.</div></div>
+      </div>
+      <div class="pair-card">
+        <svg class="pair-bg" viewBox="0 0 400 100" preserveAspectRatio="none">
+          <defs><clipPath id="l-fp"><path d="M0,0 L272,0 C260,18 245,38 225,55 C200,75 170,88 140,100 L0,100 Z"/></clipPath><clipPath id="r-fp"><path d="M272,0 C260,18 245,38 225,55 C200,75 170,88 140,100 L400,100 L400,0 Z"/></clipPath></defs>
+          <rect width="400" height="100" fill="#E8F5EE" clip-path="url(#l-fp)"/><rect width="400" height="100" fill="#FFF5E6" clip-path="url(#r-fp)"/>
+        </svg>
+        <div class="pair-content"><h4>Foundation + Pipeline</h4><div class="pair-desc">Designed the enrichment pipeline by hand. Human architects the data flow, AI generates within it.</div></div>
+      </div>
+      <div class="pair-card">
+        <svg class="pair-bg" viewBox="0 0 400 100" preserveAspectRatio="none">
+          <defs><clipPath id="l-fi"><path d="M0,0 L265,0 C255,22 238,42 218,58 C192,76 162,88 138,100 L0,100 Z"/></clipPath><clipPath id="r-fi"><path d="M265,0 C255,22 238,42 218,58 C192,76 162,88 138,100 L400,100 L400,0 Z"/></clipPath></defs>
+          <rect width="400" height="100" fill="#E8F5EE" clip-path="url(#l-fi)"/><rect width="400" height="100" fill="#EEEDFE" clip-path="url(#r-fi)"/>
+        </svg>
+        <div class="pair-content"><h4>Foundation + Integration</h4><div class="pair-desc">Architected the system AND AI works inside it at runtime. Full-stack partnership.</div></div>
+      </div>
+      <div class="pair-card">
+        <svg class="pair-bg" viewBox="0 0 400 100" preserveAspectRatio="none">
+          <defs><clipPath id="l-tp"><path d="M0,0 L270,0 C262,22 248,42 228,58 C205,74 175,86 142,100 L0,100 Z"/></clipPath><clipPath id="r-tp"><path d="M270,0 C262,22 248,42 228,58 C205,74 175,86 142,100 L400,100 L400,0 Z"/></clipPath></defs>
+          <rect width="400" height="100" fill="#EBF3FB" clip-path="url(#l-tp)"/><rect width="400" height="100" fill="#FFF5E6" clip-path="url(#r-tp)"/>
+        </svg>
+        <div class="pair-content"><h4>Tooling + Pipeline</h4><div class="pair-desc">Tools that surface AI-curated insights without calling AI at runtime. Enriched data, human interface.</div></div>
+      </div>
+      <div class="pair-card">
+        <svg class="pair-bg" viewBox="0 0 400 100" preserveAspectRatio="none">
+          <defs><clipPath id="l-ti"><path d="M0,0 L260,0 C252,20 235,42 215,58 C190,76 160,88 135,100 L0,100 Z"/></clipPath><clipPath id="r-ti"><path d="M260,0 C252,20 235,42 215,58 C190,76 160,88 135,100 L400,100 L400,0 Z"/></clipPath></defs>
+          <rect width="400" height="100" fill="#EBF3FB" clip-path="url(#l-ti)"/><rect width="400" height="100" fill="#EEEDFE" clip-path="url(#r-ti)"/>
+        </svg>
+        <div class="pair-content"><h4>Tooling + Integration</h4><div class="pair-desc">Human curation tools inside AI-integrated systems. Annotator on top of an AI platform.</div></div>
+      </div>
+      <div class="pair-card">
+        <svg class="pair-bg" viewBox="0 0 400 100" preserveAspectRatio="none">
+          <defs><clipPath id="l-pi"><path d="M0,0 L275,0 C265,20 250,40 230,56 C208,72 178,85 148,100 L0,100 Z"/></clipPath><clipPath id="r-pi"><path d="M275,0 C265,20 250,40 230,56 C208,72 178,85 148,100 L400,100 L400,0 Z"/></clipPath></defs>
+          <rect width="400" height="100" fill="#FFF5E6" clip-path="url(#l-pi)"/><rect width="400" height="100" fill="#EEEDFE" clip-path="url(#r-pi)"/>
+        </svg>
+        <div class="pair-content"><h4>Pipeline + Integration</h4><div class="pair-desc">Data enrichment feeds AI reasoning at runtime. The richest data architecture intersection.</div></div>
+      </div>
+    </div>
+
+    <!-- Row 3: Triples (2x2 layout, three-way split) -->
+    <div class="row-header">
+      <div class="row-count">4</div>
+      <div class="row-title">Triple intersections (operating across three domains simultaneously)</div>
+    </div>
+    <div class="triples-row">
+      <div class="triple-card">
+        <svg class="triple-bg" viewBox="0 0 400 100" preserveAspectRatio="none">
+          <defs><clipPath id="t1l"><path d="M0,0 L235,0 C220,20 195,42 168,58 C148,70 128,80 108,100 L0,100 Z"/></clipPath><clipPath id="t1m"><path d="M235,0 C220,20 195,42 168,58 C148,70 128,80 108,100 L290,100 C300,82 312,65 328,50 C342,38 355,26 365,0 Z"/></clipPath><clipPath id="t1r"><path d="M365,0 C355,26 342,38 328,50 C312,65 300,82 290,100 L400,100 L400,0 Z"/></clipPath></defs>
+          <rect width="400" height="100" fill="#E8F5EE" clip-path="url(#t1l)"/><rect width="400" height="100" fill="#EBF3FB" clip-path="url(#t1m)"/><rect width="400" height="100" fill="#FFF5E6" clip-path="url(#t1r)"/>
+        </svg>
+        <div class="triple-content">
+          <h4>Foundation + Tooling + Pipeline</h4>
+          <div class="triple-desc">Built the system with AI, shipped tools that run independently, and curated the content pipeline. The full build-to-deliver chain without runtime AI dependency.</div>
+        </div>
+      </div>
+      <div class="triple-card">
+        <svg class="triple-bg" viewBox="0 0 400 100" preserveAspectRatio="none">
+          <defs><clipPath id="t2l"><path d="M0,0 L240,0 C225,20 200,42 172,58 C152,70 132,80 112,100 L0,100 Z"/></clipPath><clipPath id="t2m"><path d="M240,0 C225,20 200,42 172,58 C152,70 132,80 112,100 L285,100 C296,82 308,65 322,50 C336,38 350,26 360,0 Z"/></clipPath><clipPath id="t2r"><path d="M360,0 C350,26 336,38 322,50 C308,65 296,82 285,100 L400,100 L400,0 Z"/></clipPath></defs>
+          <rect width="400" height="100" fill="#E8F5EE" clip-path="url(#t2l)"/><rect width="400" height="100" fill="#EBF3FB" clip-path="url(#t2m)"/><rect width="400" height="100" fill="#EEEDFE" clip-path="url(#t2r)"/>
+        </svg>
+        <div class="triple-content">
+          <h4>Foundation + Tooling + Integration</h4>
+          <div class="triple-desc">Built the system with AI, shipped standalone tools, and AI reasons alongside live data at runtime. Development partnership plus runtime intelligence.</div>
+        </div>
+      </div>
+      <div class="triple-card">
+        <svg class="triple-bg" viewBox="0 0 400 100" preserveAspectRatio="none">
+          <defs><clipPath id="t3l"><path d="M0,0 L230,0 C215,20 190,42 162,58 C142,70 122,80 102,100 L0,100 Z"/></clipPath><clipPath id="t3m"><path d="M230,0 C215,20 190,42 162,58 C142,70 122,80 102,100 L295,100 C305,82 318,65 332,50 C346,38 358,26 368,0 Z"/></clipPath><clipPath id="t3r"><path d="M368,0 C358,26 346,38 332,50 C318,65 305,82 295,100 L400,100 L400,0 Z"/></clipPath></defs>
+          <rect width="400" height="100" fill="#E8F5EE" clip-path="url(#t3l)"/><rect width="400" height="100" fill="#FFF5E6" clip-path="url(#t3m)"/><rect width="400" height="100" fill="#EEEDFE" clip-path="url(#t3r)"/>
+        </svg>
+        <div class="triple-content">
+          <h4>Foundation + Pipeline + Integration</h4>
+          <div class="triple-desc">Built the system with AI, curated the data pipeline, and AI reasons over that data at runtime. Architecture through to live intelligence.</div>
+        </div>
+      </div>
+      <div class="triple-card">
+        <svg class="triple-bg" viewBox="0 0 400 100" preserveAspectRatio="none">
+          <defs><clipPath id="t4l"><path d="M0,0 L238,0 C222,20 198,42 170,58 C150,70 130,80 110,100 L0,100 Z"/></clipPath><clipPath id="t4m"><path d="M238,0 C222,20 198,42 170,58 C150,70 130,80 110,100 L288,100 C298,82 310,65 325,50 C340,38 352,26 362,0 Z"/></clipPath><clipPath id="t4r"><path d="M362,0 C352,26 340,38 325,50 C310,65 298,82 288,100 L400,100 L400,0 Z"/></clipPath></defs>
+          <rect width="400" height="100" fill="#EBF3FB" clip-path="url(#t4l)"/><rect width="400" height="100" fill="#FFF5E6" clip-path="url(#t4m)"/><rect width="400" height="100" fill="#EEEDFE" clip-path="url(#t4r)"/>
+        </svg>
+        <div class="triple-content">
+          <h4>Tooling + Pipeline + Integration</h4>
+          <div class="triple-desc">Standalone tools, curated pipeline, and runtime AI. The only triple without Foundation. Someone else may have built the core system.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 4: Center (four-way split) -->
+    <div class="center-card">
+      <svg class="center-bg" viewBox="0 0 700 120" preserveAspectRatio="none">
+        <defs>
+          <clipPath id="cq1"><path d="M0,0 L460,0 C445,18 420,36 390,50 C365,60 340,66 310,68 L0,68 Z"/></clipPath>
+          <clipPath id="cq2"><path d="M460,0 L700,0 L700,68 L490,68 C510,62 530,52 548,42 C572,28 588,14 600,0 Z"/></clipPath>
+          <clipPath id="cq3"><path d="M0,68 L310,68 C280,72 248,80 218,90 C190,98 162,106 140,120 L0,120 Z"/></clipPath>
+          <clipPath id="cq4"><path d="M310,68 C340,72 370,78 400,85 C440,94 475,104 490,68 L700,68 L700,120 L140,120 C162,106 190,98 218,90 C248,80 280,72 310,68 Z"/></clipPath>
+        </defs>
+        <rect width="700" height="120" fill="#E8F5EE" clip-path="url(#cq1)"/><rect width="700" height="120" fill="#EBF3FB" clip-path="url(#cq2)"/>
+        <rect width="700" height="120" fill="#FFF5E6" clip-path="url(#cq3)"/><rect width="700" height="120" fill="#EEEDFE" clip-path="url(#cq4)"/>
+      </svg>
+      <h3>Full partnership</h3>
+      <p class="center-main">All four domains operating together. You architect the system, build tools that stand alone, design data pipelines AI enriches, and integrate AI as a collaborative component alongside live data. The human decides what, the AI executes how, and the architecture survives regardless of which engine powers it.</p>
+      <p class="center-closing">The rarest position on the map. The center of the charter.</p>
+    </div>
+
+    <div class="intent-annotation">The intent gap permeates every domain, every pair, every triple, and the center above.</div>
+    <div class="adoption-note">15 positions total. Companies and individuals can map where they are and where to go next. Add a 5th domain: 31 positions. The charter blooms.</div>
+  </div>
+
+  <div class="connector-row"><div class="connector-dot"></div><div class="connector-dot"></div></div>
+
+  <!-- ZONE 3: GAP -->
+  <div class="zone zone-gap">
+    <div class="zone-label zl-gap">The current gap</div>
+    <div class="gap-row">
+      <div class="gap-card-solid">
+        <h3>Intent layer</h3>
+        <p>The structural approach we can see today. For current LLM-based AI.</p>
+      </div>
+      <div class="gap-card-dashed">
+        <h3>Unknown</h3>
+        <p>Solutions we have not imagined yet, for AI that does not exist yet. Future models may close this gap natively.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="connector-row"><div class="connector-dot"></div><div class="connector-dot"></div><div class="connector-dot"></div><div class="connector-dot"></div></div>
+
+  <!-- ZONE 4: AI -->
+  <div class="zone zone-ai">
+    <div class="zone-label zl-ai">AI intelligence</div>
+    <div class="engines-row">
+      <div class="engine-card engine-solid">
+        <h4>LLMs</h4>
+        <p>Claude, GPT, Gemini, Grok</p>
+      </div>
+      <div class="engine-card engine-dashed">
+        <h4>Scaled LLMs</h4>
+        <p>Altman, Amodei</p>
+      </div>
+      <div class="engine-card engine-dashed">
+        <h4>World models</h4>
+        <p>LeCun, AMI Labs</p>
+      </div>
+      <div class="engine-card engine-dashed">
+        <h4>New ideas</h4>
+        <p>Sutskever, SSI</p>
+      </div>
+    </div>
+    <div class="zone-desc ai-ital">Powerful but cannot operate with purpose alone.</div>
+  </div>
+
+  <!-- Ground -->
+  <div class="ground">
+    <div class="premise">"There is just intelligence. Two forms of it. Partnering."</div>
+    <div class="permanent">The only permanent premise. Everything above is a snapshot of March 2026.</div>
+    <div class="tagline">Tied at the HIP  ·  hipcharter.com  ·  Nikhil Singhal, 2026</div>
+  </div>
+</div>
+</body>
+</html>
