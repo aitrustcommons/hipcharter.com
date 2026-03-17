@@ -4,18 +4,22 @@ hide:
   - toc
 ---
 
+<div class="hero-section" markdown>
+
 # The Human Intelligence Partnership Charter
 
-**Stop Calling It Artificial. Start Building WITH Intelligence.**
+<p class="hero-subtitle">Stop Calling It Artificial. Start Building WITH Intelligence.</p>
 
-There is just intelligence. Two forms of it exist. The question of how they work together matters.
-
-The HIP Charter defines four patterns of human-AI partnership, the structural gap that appears at every pattern, and a framework for companies and individuals to map where they are and where they are headed.
+<p class="hero-tagline">There is just intelligence. Two forms of it exist. The question of how they work together matters.</p>
 
 [Read the Charter](charter.md){ .md-button .md-button--primary }
 [About the Author](about.md){ .md-button }
 
+</div>
+
 ---
+
+The HIP Charter defines four patterns of human-AI partnership, the structural gap that appears at every pattern, and a framework for companies and individuals to map where they are and where they are headed.
 
 ## Three Concepts, One Thesis
 
@@ -31,17 +35,43 @@ Together: a worldview (intelligence deserves structural respect), a framework (f
 
 ## The Four Patterns
 
-**🏗️ Foundation** — AI as Build Partner. Human steers, AI implements. The daily practice of two intelligences working side by side.
+<div class="grid cards" markdown>
 
-**🔧 Tooling** — Human-First, Zero AI Dependency. AI built it, but AI is not in it. If every API disappeared, these products still work.
+-   :material-hammer-wrench:{ .lg .middle } __Foundation__{.foundation}
 
-**⚙️ Pipeline** — AI-Enhanced Systems. AI enriches data, users interact with the result. Users may never know AI was involved.
+    ---
 
-**🔗 Integration** — AI as Collaborative Component. AI works alongside live data and domain logic. Swap the model, the architecture survives.
+    AI as Build Partner. Human steers, AI implements. The daily practice of two intelligences working side by side.
+
+    [:octicons-arrow-right-24: Read more](charter.md#foundation-ai-as-build-partner)
+
+-   :material-tools:{ .lg .middle } __Tooling__{.tooling}
+
+    ---
+
+    Human-First, Zero AI Dependency. AI built it, but AI is not in it. If every API disappeared, these products still work.
+
+    [:octicons-arrow-right-24: Read more](charter.md#tooling-human-first-zero-ai-dependency)
+
+-   :material-pipe:{ .lg .middle } __Pipeline__{.pipeline}
+
+    ---
+
+    AI-Enhanced Systems. AI enriches data, users interact with the result. Users may never know AI was involved.
+
+    [:octicons-arrow-right-24: Read more](charter.md#pipeline-ai-enhanced-systems)
+
+-   :material-link-variant:{ .lg .middle } __Integration__{.integration}
+
+    ---
+
+    AI as Collaborative Component. AI works alongside live data and domain logic. Swap the model, the architecture survives.
+
+    [:octicons-arrow-right-24: Read more](charter.md#integration-ai-as-collaborative-component)
+
+</div>
 
 These are not a hierarchy. They are petals of a bloom. The overlaps create depth. The center is full partnership.
-
-[Explore the full charter →](charter.md)
 
 ---
 

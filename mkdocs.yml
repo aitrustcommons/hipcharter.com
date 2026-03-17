@@ -64,6 +64,9 @@ extra:
     - icon: fontawesome/solid/envelope
       link: mailto:nikhil@aitrustcommons.org
 
+extra_css:
+  - stylesheets/extra.css
+
 copyright: "&copy; 2026 Nikhil Singhal. Published by AI Trust Commons. Licensed under CC BY 4.0."
 
 nav:
