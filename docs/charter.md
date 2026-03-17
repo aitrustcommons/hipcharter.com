@@ -73,6 +73,10 @@ The HIP Charter describes four patterns of human-AI partnership. They are not la
 
 New petals can be added as new paradigms emerge. World models, embodied AI, whatever comes next. The charter does not break. It blooms.
 
+![The four patterns of human-AI partnership: Foundation, Tooling, Pipeline, and Integration, each showing what the human brings and what AI brings](assets/images/hip-charter-four-patterns-foundation-tooling-pipeline-integration.png)
+
+*The four patterns. Each card shows the human contribution and the AI contribution. Color encodes identity: green (Foundation), blue (Tooling), gold (Pipeline), purple (Integration).*
+
 ### Foundation: AI as Build Partner
 
 Human architects, designs, and steers. AI implements. Human judgment drives every decision. The daily practice of two intelligences working side by side.
@@ -114,6 +118,10 @@ The four patterns create meaningful intersections. Each overlap tells a differen
 | Tooling + Integration | Human tools within an AI-integrated system |
 | Pipeline + Integration | Data pipelines feeding AI reasoning engines. Where the richest products live. |
 
+![Six pairwise overlaps of the HIP Charter patterns, each with split-color backgrounds showing the two parent patterns meeting at an organic wave boundary](assets/images/hip-charter-six-pairwise-overlaps.png)
+
+*The six pairwise overlaps. Split-color backgrounds encode lineage: each card's two colors show which patterns intersect. The organic wave boundary represents partnership, not hierarchy.*
+
 ### The 4 Triple Overlaps
 
 Operating across three patterns simultaneously. Where real sophistication lives.
@@ -121,6 +129,10 @@ Operating across three patterns simultaneously. Where real sophistication lives.
 ### The Center (All Four)
 
 Full partnership. Two intelligences, every pattern. This is rare. This is what the charter describes at its fullest expression.
+
+![Four triple intersections and the center of the HIP Charter where all four patterns converge, with three-way and four-way split-color backgrounds](assets/images/hip-charter-convergence-triples-center.png)
+
+*Convergence. The four triple intersections and the center where all four patterns meet. Three-way and four-way split colors show increasing depth of partnership. The center card: "The human decides what, the AI executes how, and the architecture survives regardless of which engine powers it."*
 
 ### Total Positions: 15
 
@@ -155,6 +167,10 @@ At every pattern of the HIP Charter, the same structural gap exists: the distanc
 | Integration | Between the user's analysis intent and what the system delivers. "Show me risk" means something different to every user. |
 
 This is the Intent Layer. Not a product. Not a specification. A structural gap between human intent and machine execution that does not exist yet.
+
+![The Intent Layer gap zone showing two boxes: the Intent Layer as the structural approach we can see today, and Unknown representing solutions we have not imagined yet](assets/images/hip-charter-intent-layer-gap.png)
+
+*The current gap. The Intent Layer is the structural approach visible today. The Unknown box is honest: future models may close this gap in ways we have not imagined. Both sit between the partnership and the AI engines.*
 
 The gap is cross-cutting. It does not sit between the partnership and the AI engines as a separate layer. It permeates every pattern. Like gravity in physics: it is everywhere, not in one place.
 
