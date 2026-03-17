@@ -20,8 +20,8 @@
 /* --- Hero Section --- */
 .hero-section {
   text-align: center;
-  padding: 1.5rem 1.5rem 1rem;
-  margin-bottom: 0.5rem;
+  padding: 1rem 1.5rem 0.5rem;
+  margin-bottom: 0;
 }
 
 .hero-section h1 {
@@ -88,7 +88,11 @@
 
 /* --- Home page: tighter sections --- */
 .md-content hr {
-  margin: 1rem 0;
+  margin: 0.75rem 0;
+}
+
+.md-content h2:first-of-type {
+  margin-top: 0.5rem;
 }
 
 /* --- Charter Page: Poster Image --- */
