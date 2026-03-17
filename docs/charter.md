@@ -68,23 +68,23 @@ New petals can be added as new paradigms emerge. World models, embodied AI, what
 
 Human architects, designs, and steers. AI implements. Human judgment drives every decision. The daily practice of two intelligences working side by side.
 
-A developer pair-programming with AI. An architect sketching while AI implements. A writer outlining while AI drafts. Anyone who works with AI daily lives in this pattern. This is where the relationship starts.
+A developer pair-programming with GitHub Copilot or Cursor. An architect sketching a system while Claude Code builds it. A writer outlining while Jasper or Writer.com drafts. Anyone who works with AI daily lives in this pattern. This is where the relationship starts.
 
 ### Tooling: Human-First, Zero AI Dependency
 
-Products that enhance human capability without calling any AI API at runtime. AI helped build them, but it is not in them. Browser extensions. Productivity tools. Developer utilities.
+Products that enhance human capability without calling any AI API at runtime. AI helped build them, but it is not in them. Browser extensions that format or annotate content. Productivity tools that organize workflows. Developer utilities that manage environments.
 
-This is the most defensible pattern in the charter. If every AI API disappeared tomorrow, these products still work. The value lives entirely in the human's hands.
+This is the most defensible pattern in the charter. If every AI API disappeared tomorrow, these products still work. The value lives entirely in the human's hands. Many of the most useful tools people use daily were built with AI as a development partner, but no user would call them "AI products."
 
 ### Pipeline: AI-Enhanced Systems
 
-AI enriches data during the build process. Users interact with the enriched output, not with AI directly. A travel site with AI-written descriptions. A news app with AI-generated summaries. A knowledge base AI helped curate.
+AI enriches data during the build process. Users interact with the enriched output, not with AI directly. Zillow's AI-generated home descriptions. Spotify's Discover Weekly playlists, curated by AI but experienced as a playlist. Google Maps traffic predictions, powered by ML but consumed as a colored route. Airbnb listing translations, written by AI but read as native content.
 
 Users may never know AI was involved. The AI is a build tool, not the product.
 
 ### Integration: AI as Collaborative Component
 
-AI works alongside proprietary APIs, rich data, and domain logic within a larger architecture. A trading platform where AI analyzes alongside live market feeds. A medical system where AI and sensors work together. A logistics platform where AI optimizes alongside real-time supply data.
+AI works alongside proprietary APIs, rich data, and domain logic within a larger architecture. Bloomberg Terminal, where AI reasoning works alongside real-time market feeds from dozens of sources. Tesla Autopilot, where AI processes camera and sensor data alongside maps and vehicle dynamics. Radiology platforms where AI analyzes imaging alongside clinical records and prior studies.
 
 Swap the model, the architecture survives. This is partnership at runtime, not just at build time. The system is designed for two intelligences from the ground up.
 
