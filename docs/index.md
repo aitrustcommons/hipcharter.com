@@ -16,6 +16,10 @@ hide:
 
 </div>
 
+![A human silhouette and an AI wireframe figure reaching toward each other across a gap filled with falling code fragments, representing the intent gap between human meaning and machine execution](assets/images/hip-charter-hero-human-ai-intent-gap.jpeg)
+
+You have felt this. You typed something into an AI tool, got something back that was not quite what you meant, and spent the next twenty minutes trying to explain the gap between what you said and what you actually wanted. That gap is not a bug. It is a structural problem. And the word "artificial" is part of why it exists.
+
 ---
 
 ## The Premise
