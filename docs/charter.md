@@ -1,6 +1,8 @@
 ---
 title: "The Human Intelligence Partnership Charter: Stop Calling It Artificial"
 description: "The HIP Charter defines four patterns of human-AI partnership: Foundation, Tooling, Pipeline, and Integration. Drop 'artificial.' Start building with intelligence."
+hide:
+  - navigation
 ---
 
 # The Human Intelligence Partnership Charter
@@ -178,6 +180,14 @@ To be clear: this gap exists today, with the current generation of LLM-based mod
 
 ---
 
+## The Full Map
+
+![The complete HIP Charter combination lattice: four patterns, six pairwise overlaps, four triple intersections, and the center where all four converge, showing 15 positions on the map of human-AI partnership](assets/images/hip-charter-combination-lattice-full-poster.png)
+
+This is the complete picture. Four patterns at the top. Six pairwise overlaps where any two patterns intersect. Four triple intersections where three patterns converge simultaneously. And one center where all four meet: full partnership between two intelligences. 15 positions on the map. Every position represents a different way human and AI intelligence can work together. The question is not which position is "best." The question is: where are you now, and where do you want to go next?
+
+---
+
 ## Adoption: For Companies and Individuals
 
 The HIP Charter is not just a description. It is a framework others can use.
@@ -186,20 +196,61 @@ The HIP Charter is not just a description. It is a framework others can use.
 
 "We are strong in Foundation and Pipeline. Our next investment is Integration."
 
-The charter becomes an AI adoption roadmap. Instead of the vague question "how do we adopt AI?", companies can:
+The charter becomes an AI adoption roadmap. Instead of the vague question "how do we adopt AI?", companies can use the map:
 
-1. Map which patterns they currently operate in
-2. Identify which overlaps they have achieved
-3. See which adjacent patterns would create the most value
-4. Plan investment in partnership infrastructure, not just AI tools
+<div class="grid cards" markdown>
+
+-   :material-map-marker:{ .lg .middle } __Map__
+
+    ---
+
+    Identify which patterns your organization currently operates in. Where does human and AI intelligence already partner?
+
+-   :material-magnify:{ .lg .middle } __Identify__
+
+    ---
+
+    Find which overlaps you have achieved. Are you operating at intersections, or only in single patterns?
+
+-   :material-compass:{ .lg .middle } __See__
+
+    ---
+
+    Look at adjacent patterns. Which neighboring position on the map would create the most value for your teams and customers?
+
+-   :material-arrow-up-bold:{ .lg .middle } __Plan__
+
+    ---
+
+    Invest in partnership infrastructure, not just AI tools. The architecture is the value. The model is replaceable.
+
+</div>
 
 ### For Individuals
 
 The intersections become progression markers. Not a ladder to climb, but territory to explore.
 
-- "I have achieved Foundation. I pair-program with AI daily."
-- "I have expanded into Foundation + Tooling. I built a tool with AI that does not depend on AI."
-- "Next: Pipeline. I want to build systems where AI enriches data that users consume without seeing AI."
+<div class="grid cards" markdown>
+
+-   :material-account-check:{ .lg .middle } __Where I Am__
+
+    ---
+
+    "I pair-program with AI daily. I have achieved Foundation. The AI implements, I steer."
+
+-   :material-account-arrow-right:{ .lg .middle } __Where I Expanded__
+
+    ---
+
+    "I built a tool with AI that does not depend on AI. Foundation plus Tooling. The product survives without the API."
+
+-   :material-account-star:{ .lg .middle } __Where I Am Headed__
+
+    ---
+
+    "Next: Pipeline. I want to build systems where AI enriches data that users consume without ever seeing AI."
+
+</div>
 
 The progression is personal, non-linear, and defined by the individual's interests. No one path is correct. The map shows what is possible.
 
