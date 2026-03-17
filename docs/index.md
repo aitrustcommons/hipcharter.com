@@ -1,4 +1,5 @@
 ---
+title: The Human Intelligence Partnership Charter
 description: "The Human Intelligence Partnership Charter. Four patterns of human-AI partnership. Drop 'artificial.' Start building with intelligence."
 hide:
   - toc
