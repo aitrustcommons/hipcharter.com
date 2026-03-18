@@ -333,4 +333,6 @@ The HIP Charter is part of the *From Instinct to Intent*™ series, which explor
 
 *Nikhil Singhal is a technology executive with 25+ years of engineering leadership at Microsoft, T-Mobile, AT&T, Expedia Group, and Hitachi Consulting. He is the founder of [AI Trust Commons](https://aitrustcommons.org), submitted a public comment to NIST on AI agent governance, and is writing a book on the journey from instinct to intent in human-AI interaction.*
 
+*Also published on [Medium](https://nikhilsinghal-ai-trust-commons.medium.com/the-human-intelligence-partnership-charter-3cb893e1d5f0) · [Zenodo](https://doi.org/10.5281/zenodo.19078843) (DOI: 10.5281/zenodo.19078843)*
+
 *© 2026 Nikhil Singhal. Published by AI Trust Commons.*
