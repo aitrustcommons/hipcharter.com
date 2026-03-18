@@ -118,5 +118,62 @@
   font-size: 0.8rem;
 }
 
+/* --- Three Concepts Cards --- */
+.grid.cards .concept-why {
+  border-left: 4px solid var(--hip-foundation);
+  background: var(--hip-foundation-bg);
+}
+
+.grid.cards .concept-how {
+  border-left: 4px solid var(--hip-tooling);
+  background: var(--hip-tooling-bg);
+}
+
+.grid.cards .concept-what {
+  border-left: 4px solid #B91C1C;
+  background: #FEF2F2;
+}
+
+/* --- Adoption: Company Cards (2x2 grid, petal colors) --- */
+.company-cards > ul {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+
+.company-cards > ul > li:nth-child(1) {
+  border-left: 4px solid var(--hip-foundation);
+  background: var(--hip-foundation-bg);
+}
+
+.company-cards > ul > li:nth-child(2) {
+  border-left: 4px solid var(--hip-tooling);
+  background: var(--hip-tooling-bg);
+}
+
+.company-cards > ul > li:nth-child(3) {
+  border-left: 4px solid var(--hip-pipeline);
+  background: var(--hip-pipeline-bg);
+}
+
+.company-cards > ul > li:nth-child(4) {
+  border-left: 4px solid var(--hip-integration);
+  background: var(--hip-integration-bg);
+}
+
+/* --- Adoption: Individual Cards (progression colors) --- */
+.individual-cards > ul > li:nth-child(1) {
+  border-left: 4px solid var(--hip-foundation);
+  background: var(--hip-foundation-bg);
+}
+
+.individual-cards > ul > li:nth-child(2) {
+  border-left: 4px solid var(--hip-tooling);
+  background: var(--hip-tooling-bg);
+}
+
+.individual-cards > ul > li:nth-child(3) {
+  border-left: 4px solid var(--hip-pipeline);
+  background: var(--hip-pipeline-bg);
+}
+
 /* --- Import DM Serif Display for headings --- */
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');

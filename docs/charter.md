@@ -57,13 +57,35 @@ The name itself carries the premise. "Human Intelligence Partnership Charter." N
 
 ## Three Concepts, One Thesis
 
-| Concept | What it answers | Level |
-|---------|----------------|-------|
-| **Just Intelligence** | WHY you design this way | Philosophy |
-| **The HIP Charter** | HOW you design this way | Framework |
-| **The Intent Layer** | WHAT is missing at every pattern | Gap |
+<div class="grid cards" markdown>
 
-Separately, each is useful. Just Intelligence without the HIP Charter is philosophy with no blueprint. The HIP Charter without Just Intelligence is engineering with no soul. The Intent Layer without both is a problem statement with no solution direction.
+-   :material-lightbulb:{ .lg .middle } __Just Intelligence__{.concept-why}
+
+    ---
+
+    **WHY** you design this way. The premise. Drop "artificial." Treat what you are working with as a different form of intelligence that deserves the same structural respect in communication.
+
+    *Philosophy*
+
+-   :material-view-grid:{ .lg .middle } __The HIP Charter__{.concept-how}
+
+    ---
+
+    **HOW** you design this way. The framework. Four patterns of partnership, extensible, with overlaps that create depth and a center that represents full collaboration.
+
+    *Framework*
+
+-   :material-alert-circle:{ .lg .middle } __The Intent Layer__{.concept-what}
+
+    ---
+
+    **WHAT** is missing at every pattern. The gap. The structural interface between human intent and machine execution that does not exist yet. Visible at every petal.
+
+    *Gap*
+
+</div>
+
+Separately, each is useful. Just Intelligence without the HIP Charter is philosophy with no blueprint. The HIP Charter without Just Intelligence is engineering with no soul. The Intent Layer without both is a problem statement with no direction.
 
 Together: a worldview (intelligence deserves structural respect), a framework (four patterns of partnership), and a gap (the structural interface between two intelligences). They are inseparable.
 
@@ -198,7 +220,7 @@ The HIP Charter is not just a description. It is a framework others can use.
 
 The charter becomes an AI adoption roadmap. Instead of the vague question "how do we adopt AI?", companies can use the map:
 
-<div class="grid cards" markdown>
+<div class="grid cards company-cards" markdown>
 
 -   :material-map-marker:{ .lg .middle } __Map__
 
@@ -230,7 +252,7 @@ The charter becomes an AI adoption roadmap. Instead of the vague question "how d
 
 The intersections become progression markers. Not a ladder to climb, but territory to explore.
 
-<div class="grid cards" markdown>
+<div class="grid cards individual-cards" markdown>
 
 -   :material-account-check:{ .lg .middle } __Where I Am__
 

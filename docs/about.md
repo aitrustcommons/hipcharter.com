@@ -1,5 +1,7 @@
 ---
 description: "About Nikhil Singhal, author of the HIP Charter. CTO, VP Engineering, AI Practitioner and Governance Strategist."
+hide:
+  - navigation
 ---
 
 # About
