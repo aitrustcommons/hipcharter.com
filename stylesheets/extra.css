@@ -1,0 +1,179 @@
+/* ============================================================
+   HIP Charter Custom Styles
+   Colors from v8 split-color poster palette
+   ============================================================ */
+
+/* --- Color Variables --- */
+:root {
+  --hip-foundation: #2D6A4F;
+  --hip-foundation-bg: #E8F5EE;
+  --hip-tooling: #1D4E89;
+  --hip-tooling-bg: #E3F0FC;
+  --hip-pipeline: #8B6914;
+  --hip-pipeline-bg: #FDF6E3;
+  --hip-integration: #8B2252;
+  --hip-integration-bg: #FCE4F0;
+  --hip-center: #3C3489;
+  --hip-center-bg: #EEEDFE;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  text-align: center;
+  padding: 1rem 1.5rem 0.5rem;
+  margin-bottom: 0;
+}
+
+.hero-section h1 {
+  font-family: 'DM Serif Display', 'DM Sans', serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.hero-section .hero-subtitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 0.85;
+  margin-bottom: 1rem;
+}
+
+.hero-section .hero-tagline {
+  font-size: 1.05rem;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.7;
+}
+
+/* --- Petal Cards (grid cards with color accents) --- */
+.grid.cards .foundation {
+  border-left: 4px solid var(--hip-foundation);
+  background: var(--hip-foundation-bg);
+}
+
+.grid.cards .tooling {
+  border-left: 4px solid var(--hip-tooling);
+  background: var(--hip-tooling-bg);
+}
+
+.grid.cards .pipeline {
+  border-left: 4px solid var(--hip-pipeline);
+  background: var(--hip-pipeline-bg);
+}
+
+.grid.cards .integration {
+  border-left: 4px solid var(--hip-integration);
+  background: var(--hip-integration-bg);
+}
+
+/* Card hover: lift and subtle shadow */
+.grid.cards > ul > li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+}
+
+/* --- Charter Page: Better Typography --- */
+.md-content h1 {
+  font-family: 'DM Serif Display', 'DM Sans', serif;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+}
+
+.md-content h2 {
+  margin-top: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+/* --- Home page: tighter sections --- */
+.md-content hr {
+  margin: 0.75rem 0;
+}
+
+.md-content h2:first-of-type {
+  margin-top: 0.5rem;
+}
+
+/* --- Charter Page: Poster Image --- */
+.md-content img[alt*="Combination Lattice"] {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  margin: 1.5rem 0 2rem;
+}
+
+/* --- Tables: Cleaner look --- */
+.md-typeset table:not([class]) {
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.md-typeset table:not([class]) th {
+  font-weight: 600;
+  text-transform: none;
+}
+
+/* --- Footer: Subtle --- */
+.md-footer-meta {
+  font-size: 0.8rem;
+}
+
+/* --- Three Concepts Cards --- */
+.grid.cards .concept-why {
+  border-left: 4px solid var(--hip-foundation);
+  background: var(--hip-foundation-bg);
+}
+
+.grid.cards .concept-how {
+  border-left: 4px solid var(--hip-tooling);
+  background: var(--hip-tooling-bg);
+}
+
+.grid.cards .concept-what {
+  border-left: 4px solid #B91C1C;
+  background: #FEF2F2;
+}
+
+/* --- Adoption: Company Cards (2x2 grid, petal colors) --- */
+.company-cards > ul {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+
+.company-cards > ul > li:nth-child(1) {
+  border-left: 4px solid var(--hip-foundation);
+  background: var(--hip-foundation-bg);
+}
+
+.company-cards > ul > li:nth-child(2) {
+  border-left: 4px solid var(--hip-tooling);
+  background: var(--hip-tooling-bg);
+}
+
+.company-cards > ul > li:nth-child(3) {
+  border-left: 4px solid var(--hip-pipeline);
+  background: var(--hip-pipeline-bg);
+}
+
+.company-cards > ul > li:nth-child(4) {
+  border-left: 4px solid var(--hip-integration);
+  background: var(--hip-integration-bg);
+}
+
+/* --- Adoption: Individual Cards (progression colors) --- */
+.individual-cards > ul > li:nth-child(1) {
+  border-left: 4px solid var(--hip-foundation);
+  background: var(--hip-foundation-bg);
+}
+
+.individual-cards > ul > li:nth-child(2) {
+  border-left: 4px solid var(--hip-tooling);
+  background: var(--hip-tooling-bg);
+}
+
+.individual-cards > ul > li:nth-child(3) {
+  border-left: 4px solid var(--hip-pipeline);
+  background: var(--hip-pipeline-bg);
+}
+
+/* --- Import DM Serif Display for headings --- */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
