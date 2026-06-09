@@ -1,6 +1,7 @@
 ---
 title: "How the HIP Charter Was Made"
 description: "The 12-step naming process. 8 visual iterations. A year of daily partnership between human and AI intelligence. The story behind the charter."
+og_type: article
 hide:
   - navigation
 ---

@@ -3,9 +3,10 @@
 {% block extrahead %}
   {% set og_title = page.meta.title if page and page.meta and page.meta.title else (page.title if page and page.title else config.site_name) %}
   {% set og_desc = page.meta.description if page and page.meta and page.meta.description else config.site_description %}
+  {% set og_type = page.meta.og_type if page and page.meta and page.meta.og_type else 'website' %}
 
   <!-- Open Graph -->
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="{{ og_type }}">
   <meta property="og:site_name" content="{{ config.site_name }}">
   <meta property="og:title" content="{{ og_title }}">
   <meta property="og:description" content="{{ og_desc }}">
@@ -26,4 +27,86 @@
   <!-- Additional SEO -->
   <meta name="author" content="Nikhil Singhal">
   <meta name="keywords" content="HIP Charter, Human Intelligence Partnership, AI governance, Intent Layer, human-AI collaboration, AI framework, Just Intelligence">
+
+  <!-- Structured Data: identity graph (Person + AI Trust Commons Organization + WebSite). Person uses the same @id as the canonical hub at nikhilsinghal.com so search engines treat both surfaces as one entity. -->
+  {% raw %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://nikhilsinghal.com/#person",
+        "name": "Nikhil Singhal",
+        "givenName": "Nikhil",
+        "familyName": "Singhal",
+        "jobTitle": "CTO | VP Engineering | AI Practitioner & Governance Strategist",
+        "url": "https://nikhilsinghal.com",
+        "image": "https://nikhilsinghal.com/img/nikhil-singhal-portrait-1200.jpg",
+        "email": "mailto:nikhil@omspark.com",
+        "telephone": "+1-206-226-2722",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Seattle",
+          "addressRegion": "WA",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/nikhilsinghal/",
+          "https://github.com/nikhilsi",
+          "https://orcid.org/0009-0003-5449-6830",
+          "https://nikhilsinghal-ai-trust-commons.medium.com/",
+          "https://about.me/nikhil.singhal",
+          "https://x.com/nikhilsinghal",
+          "https://www.youtube.com/@nikhilsinghal",
+          "https://aitrustcommons.org",
+          "https://hipcharter.com",
+          "https://omspark.com"
+        ],
+        "knowsAbout": [
+          "Artificial Intelligence",
+          "AI Governance",
+          "Human-AI Interaction",
+          "Engineering Leadership",
+          "AI Trust Commons",
+          "Human Intelligence Partnership Charter",
+          "Intent Layer",
+          "Model Context Protocol",
+          "Large Language Models",
+          "AI Agents",
+          "AI Memory"
+        ],
+        "alumniOf": [
+          {"@type": "EducationalOrganization", "name": "Harvard University"},
+          {"@type": "EducationalOrganization", "name": "Bangalore University"}
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "OmSpark LLC",
+          "url": "https://omspark.com"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://aitrustcommons.org/#organization",
+        "name": "AI Trust Commons",
+        "url": "https://aitrustcommons.org",
+        "founder": {"@id": "https://nikhilsinghal.com/#person"},
+        "sameAs": [
+          "https://github.com/aitrustcommons",
+          "https://nikhilsinghal-ai-trust-commons.medium.com/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://hipcharter.com/#website",
+        "url": "https://hipcharter.com",
+        "name": "HIP Charter",
+        "publisher": {"@id": "https://aitrustcommons.org/#organization"},
+        "inLanguage": "en"
+      }
+    ]
+  }
+  </script>
+  {% endraw %}
 {% endblock %}

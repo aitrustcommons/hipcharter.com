@@ -1,6 +1,6 @@
 ---
 title: The Human Intelligence Partnership Charter
-description: "Drop 'artificial.' Treat AI as a different form of intelligence worthy of the same structural respect. The HIP Charter defines four patterns of human-AI partnership."
+description: "Drop 'artificial.' Treat AI as a different intelligence worthy of structural respect. The HIP Charter defines four patterns of human-AI partnership."
 hide:
   - toc
   - navigation
