@@ -52,7 +52,7 @@ visual-concepts/         # Diagram source files (HTML, PNG, 2x PNG)
 
 ## Author
 
-**Nikhil Singhal** — CTO | VP Engineering | AI Practitioner & Governance Strategist
+**Nikhil Singhal** — Enterprise AI Architect & Builder | Founder, AI Trust Commons
 
 - [LinkedIn](https://linkedin.com/in/nikhilsinghal)
 - [GitHub](https://github.com/nikhilsi)
