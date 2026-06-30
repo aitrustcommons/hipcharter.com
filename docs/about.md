@@ -1,5 +1,5 @@
 ---
-description: "About Nikhil Singhal, author of the HIP Charter. CTO, VP Engineering, AI Practitioner and Governance Strategist."
+description: "About Nikhil Singhal, author of the HIP Charter. AI architect, builder, and founder of AI Trust Commons."
 hide:
   - navigation
 ---
@@ -10,9 +10,9 @@ hide:
 
 ### Nikhil Singhal
 
-**CTO | VP Engineering | AI Practitioner & Governance Strategist**
+**Enterprise AI Architect & Builder | Hands-on CTO | Founder, AI Trust Commons**
 
-25+ years of engineering leadership at Microsoft, T-Mobile, AT&T, Expedia Group, and Hitachi Consulting. Based in Seattle, WA.
+Three decades of engineering leadership at Microsoft, T-Mobile, AT&T, Expedia Group, and Hitachi Consulting. Based in Seattle, WA.
 
 The HIP Charter emerged from a year of building with AI as a full partner across eight products, thousands of commits, and a daily practice that demanded a better framework for describing how human and AI intelligence actually work together. The charter is not theoretical. It was discovered through the work.
 
