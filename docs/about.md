@@ -40,7 +40,7 @@ Nikhil is also the founder of [AI Trust Commons](https://aitrustcommons.org), an
 
 | Title | Channel | DOI |
 |-------|---------|-----|
-| Public Comment on AI Agent Governance | [regulations.gov](https://www.regulations.gov/comment/NIST-2025-0035-0352) | [10.5281/zenodo.18903117](https://doi.org/10.5281/zenodo.18903117) |
+| Public Comment on AI Agent Governance | [regulations.gov](https://www.regulations.gov/comment/NIST-2025-0035-0424) | [10.5281/zenodo.18903117](https://doi.org/10.5281/zenodo.18903117) |
 | NCCoE Response: Intent Conveyance in AI Agent Authorization | [aitrustcommons.org](https://aitrustcommons.org/blog/2026/03/23/nccoe-ai-agent-identity-authorization-response/) | [10.5281/zenodo.19197399](https://doi.org/10.5281/zenodo.19197399) |
 
 ### Trademark
