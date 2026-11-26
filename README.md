@@ -1,3 +1,32 @@
+# hipcharter.com: forwarding to aitrustcommons.org
+
+Since Nov 2026 (AITC task #625) the HIP Charter lives on AI Trust Commons:
+
+- https://aitrustcommons.org/hip-charter/ (the charter; the old home page's opening is on top)
+- https://aitrustcommons.org/hip-charter/story/ (how it was made)
+
+This repo now publishes only `forwards/`: one small page per old address that sends the visitor to the new one. Each forward page has an instant meta refresh, a canonical link to the new page and a noindex tag. A one-line script carries any #section through. The images stay at their old addresses under `forwards/assets/images/`, so anything that embeds them keeps working.
+
+| Old address | Goes to |
+|---|---|
+| hipcharter.com/ | aitrustcommons.org/hip-charter/ |
+| hipcharter.com/charter/ | aitrustcommons.org/hip-charter/ |
+| hipcharter.com/story/ | aitrustcommons.org/hip-charter/story/ |
+| hipcharter.com/about/ | aitrustcommons.org/about/ |
+| anything else (404.html) | aitrustcommons.org/hip-charter/ |
+
+`.github/workflows/deploy.yml` publishes `forwards/` on every push to main. The Pages source must be "GitHub Actions".
+
+## Rollback
+
+The old MkDocs site is still on the `gh-pages` branch. To bring it back: disable the deploy workflow (`gh workflow disable deploy.yml`), switch the Pages source to "Deploy from a branch: gh-pages, root", and check that the custom domain is still hipcharter.com with HTTPS on. Don't push to gh-pages.
+
+## The old site's source
+
+`docs/`, `mkdocs.yml`, `overrides/`, `internal/` and `visual-concepts/` are kept for history. Nothing builds them now. The text that moved to AITC was lightly edited there; the change list is in ns-2026-the-big-push, ai-trust-commons/site-redesign/hip-merge/content-pass.md.
+
+---
+
 # The Human Intelligence Partnership Charter
 
 **Stop Calling It Artificial. Start Building WITH Intelligence.**
